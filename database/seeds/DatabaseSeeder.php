@@ -368,7 +368,7 @@ class CategoriesSeeder extends Seeder {
             'fields' => '["title","meta_title","meta_description","meta_keywords"]',
         ]);
         Category::create([
-            'id' => "7",
+            'id' => "8",
             'name' => 'Коментарі',
             'link' => 'comments',
             'fields' => '["title","meta_title","meta_description","meta_keywords"]',
