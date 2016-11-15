@@ -77,6 +77,13 @@ Route::group(['prefix'=>'admin30x5', 'middleware' => ['auth', 'backend.init']], 
 	Route::get('/texts/{id}','Backend\AdminTextsController@edit');//Вывод формы редакторирование
 	Route::put('/texts/{id}','Backend\AdminTextsController@update');//Сохранение после редактирования
 
+	Route::get('/resume','Backend\AdminResumeController@index');//Вывод списка..
+	//Route::get('/comments/{article_id}/create','Backend\AdminResumeController@create');//Вывод формы создания элемента..
+	//Route::post('/comments/{article_id}/create','Backend\AdminResumeController@store');//Сохранение элемента
+	Route::delete('/resume/{id}','Backend\AdminResumeController@destroy');//Удаление элемента
+	Route::get('/resume/{id}','Backend\AdminResumeController@edit');//Вывод формы редакторирование..
+	//Route::put('/comments/{article_id}/{id}','Backend\AdminResumeController@update');//Сохранение после редактирования..
+
 });
 
 Route::group(['middleware' => 'frontend.init'], function(){

@@ -13,6 +13,7 @@ return array(
     'CreateCommentsTable' => $baseDir . '/database/migrations/2016_11_04_094627_create_comments_table.php',
     'CreateLangsTable' => $baseDir . '/database/migrations/2016_09_14_124942_create_langs_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateResumesTable' => $baseDir . '/database/migrations/2016_11_15_150023_create_resumes_table.php',
     'CreateTextsTable' => $baseDir . '/database/migrations/2016_10_06_124518_create_texts_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

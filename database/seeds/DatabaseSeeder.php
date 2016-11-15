@@ -373,6 +373,12 @@ class CategoriesSeeder extends Seeder {
             'link' => 'comments',
             'fields' => '["title","meta_title","meta_description","meta_keywords"]',
         ]);
+        Category::create([
+            'id' => "9",
+            'name' => 'Резюме',
+            'link' => 'resume',
+            'fields' => '["title","meta_title","meta_description","meta_keywords"]',
+        ]);
     }
 
 }
