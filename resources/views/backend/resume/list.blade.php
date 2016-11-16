@@ -45,6 +45,9 @@
                             <th class="hidden-phone center">
                                 Бажаний рівень ЗП
                             </th>
+                            <th class="hidden-phone center">
+                                Контактний номер телефону
+                            </th>
                             <th></th>
                         </tr>
                         </thead>
@@ -57,10 +60,11 @@
                                         <span class="lbl">{{ $admin_resume->id }}</span>
                                     </label>
                                 </td>
-                                <td>{{ $admin_resume->name }}</td>
+                                <td> <a href="{{ $url }}/resume/{{$admin_resume->id}}">{{ $admin_resume->name }}</a></td>
                                 <td>{{date('d-m-Y',strtotime($admin_resume->created_at))}}</td>
                                 <td>{{ $admin_resume->specialty }}</td>
                                 <td>{{ $admin_resume->salary }}</td>
+                                <td>{{ $admin_resume->telephone }}</td>
                                 <td class="td-actions">
                                     <div class="visible-phone visible-desktop action-buttons">
                                         <a class="green" href="{{ $url }}/resume/{{$admin_resume->id}}">
@@ -87,7 +91,7 @@
                 "aaSorting": [[6,'desc']],
                 "aoColumns": [
                     { "bSortable": false },
-                    null, null,null, null,
+                    null, null,null, null,null,
                     { "bSortable": false }
                 ] } );
         });

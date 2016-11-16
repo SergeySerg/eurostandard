@@ -80,7 +80,11 @@ class AdminResumeController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$admin_resume  = Resume::where('id',$id)->first();
+		//dd($admin_resume);
+		return view('backend.resume.edit',[
+			'admin_resume'=>$admin_resume,
+		]);
 	}
 
 	/**
