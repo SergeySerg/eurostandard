@@ -22,7 +22,7 @@ class ArticleController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index($lang, $type = 'hotel')
+	public function index($lang, $type = 'company')
 	{
 		$events = null;
 		$gallery = null;
@@ -36,6 +36,7 @@ class ArticleController extends Controller {
 					->where('active','=', 1)
 					->get()
 					->sortByDesc("priority");
+				//dd($slides);
 				break;
 			case 'rooms':
 				break;

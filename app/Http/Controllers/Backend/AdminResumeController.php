@@ -106,7 +106,21 @@ class AdminResumeController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$admin_resume = Resume::where('id', '=', $id)->first();
+		if($admin_resume AND $admin_resume->delete()){
+			Storage::deleteDirectory('upload/resume/' . $id);
+
+			return response()->json([
+				"status" => 'success',
+				"message" => 'Успішно видалено'
+			]);
+		}
+		else{
+			return response()->json([
+				"status" => 'error',
+				"message" => 'Виникла помилка при видаленні'
+			]);
+		}
 	}
 
 }

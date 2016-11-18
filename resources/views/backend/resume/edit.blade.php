@@ -108,16 +108,16 @@
                     </div>
                     <div class="form-actions">
                         <a href='{{ $url }}/resume'>
-                            <button class="btn btn-info">Повернутися до списку всіх резюме</button>
+                            <div class="btn btn-info">Повернутися до списку всіх резюме</div>
                         </a>
                     </div>
                     <div class="space-4"></div>
 
                 </form>
                     <!--PAGE CONTENT ENDS-->
-                <!--/.span-->
-            </div><!--/.row-fluid-->
-        </div><!--/.page-content-->
+            </div>   <!--/.span-->
+        </div><!--/.row-fluid-->
+    </div><!--/.page-content-->
         <div id="token" style="display: none">{{csrf_token()}}</div>
 @stop
 

@@ -25,23 +25,23 @@ class FrontendInit {
 			->first();
 
 		if (!$currentLang){
-			abort('404');//страница 404 в файлі .ENV ставим false и робим шаблон 404 стор
+			abort('404');
 		}
 
 		// Locale setting
 		App::setLocale($request->lang);
 
-		$hotel = Category::where('link','=', 'hotel')
+		$company = Category::where('link','=', 'company')
 			->first()
 			->articles
 			->first();
-		$rooms = Category::where('link','=', 'rooms')
+		$news = Category::where('link','=', 'news')
 			->first()
 			->articles()
 			->where('active','=', '1')
 			->get()
 			->sortByDesc("priority");
-		$services = Category::where('link','=', 'services')
+		$works = Category::where('link','=', 'works')
 			->first()
 			->articles()
 			->where('active','=', 1)
@@ -66,9 +66,9 @@ class FrontendInit {
 
 		// Share to views global template variables
 		view()->share('langs', Lang::all());
-		view()->share('hotel', $hotel);
-		view()->share('rooms', $rooms);
-		view()->share('services', $services);
+		view()->share('company', $company);
+		view()->share('news', $news);
+		view()->share('works', $works);
 		view()->share('texts', $texts->init());
 		view()->share('version', config('app.version'));
         //view()->share('meta', $meta);

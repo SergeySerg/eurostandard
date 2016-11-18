@@ -2,7 +2,7 @@
 <html lang="{{ App::getLocale() }}">
 <head>
 	<meta charset="utf-8">
-	<title>Premium Club</title>
+	<title>Eurostandard</title>
 	<meta name="title" content="{{ $meta ->getTranslate('meta_title') }}">
 	<meta name="description" content="{{ $meta ->getTranslate('meta_description') }}">
 	<meta name="keywords" content="{{ $meta ->getTranslate('meta_keywords') }}">
@@ -15,6 +15,13 @@
 	<link rel="apple-touch-icon" href="{{ asset('/img/favicon/apple-touch-icon.png') }}">
 	<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/favicon/apple-touch-icon-72x72.png') }}">
 	<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('/img/favicon/apple-touch-icon-114x114.png') }}">
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/main.css?ver1" rel="stylesheet">
+
+
 
 	<link href="{{ asset('/css/main.css') }}?ver={{ $version }}" rel="stylesheet">
 	<link href="{{ asset('/css/fonts.css') }}" rel="stylesheet">
@@ -29,7 +36,7 @@
 
 <body>
 
-<div class="wrapper">
+<--<div class="wrapper">
 
 
 		<div class="top-line clearfix">
@@ -292,7 +299,7 @@
 
 	</footer>
 
-</div>
+</div>-->
 
 <script src="{{ asset('/libs/jquery/dist/jquery.min.js') }}"></script>
 <script src="{{ asset('/js/common.js') }}?ver={{ $version }}"></script>

@@ -70,7 +70,7 @@
                                         <a class="green" href="{{ $url }}/resume/{{$admin_resume->id}}">
                                             <i class="icon-pencil bigger-130"></i>
                                         </a>
-                                        <a href='{{ $url }}/resume/{{ $admin_resume->id}}' data-id='{{$admin_resume->id}}' class='comment-delete'>
+                                        <a href='{{ $url }}/resume/{{ $admin_resume->id}}' data-id='{{$admin_resume->id}}' class='resource-delete'>
                                             <i class="icon-trash bigger-130"></i>
                                         </a>
                                     </div>
