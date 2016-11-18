@@ -13,12 +13,12 @@ return [
 	|
 	*/
 	/* Header */
-	'home' => 'Home',
-	'company' => 'About company',
-	'news' => 'News',
-	'works' => 'Jobs',
-	'gallery' => 'Gallery',
-	'contacts' => 'Contacts',
+	'home' => 'Dom',
+	'company' => 'O firmie',
+	'news' => 'Aktualności',
+	'works' => 'Praca',
+	'gallery' => 'Galeria',
+	'contacts' => 'Kontakt',
 	/* End Header */
 	/* Gallery Page */
 	'gallerycontenttitle' => 'Галерея',

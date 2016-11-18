@@ -87,8 +87,6 @@ Route::group(['prefix'=>'admin30x5', 'middleware' => ['auth', 'backend.init']], 
 });
 
 Route::group(['middleware' => 'frontend.init'], function(){
-	Route::get('/{lang}/booking', 'Frontend\BookingController@index');
-	Route::get('/{lang}/3dtour', 'Frontend\TourController@index');
 	Route::get('/{lang}/{type?}', 'Frontend\ArticleController@index')->where('type', 'company|news|works|events|gallery|contact');
 });
 

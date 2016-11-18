@@ -50,20 +50,6 @@ class FrontendInit {
 
 		$texts = new Text();
 
-		/*$textsArray = Text::all();
-		//$texts = [];
-		foreach($textsArray as $text){
-			$desription = $text->getTranslate('description');
-			$texts[$text->id] = $desription;
-			$texts[$text->name] = $desription;
-
-		}*/
-
-
-		//MEta
-
-
-
 		// Share to views global template variables
 		view()->share('langs', Lang::all());
 		view()->share('company', $company);
