@@ -40,7 +40,7 @@
                 <form class="form-horizontal" />
 
                     <div class="control-group">
-                        <label class="control-label" for="form-field-3">ПІБ</label>
+                        <label class="control-label" for="form-field-3">ПІП</label>
 
                         <div class="controls">
                             <input type="text" name="name"  @if(isset($admin_resume)) value='{{$admin_resume->name}}' @endif id="form-field-3" placeholder="Прізвище,ім'я по батькові" />
@@ -60,10 +60,26 @@
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label" for="form-field-4">Місце народження</label>
+                        <label class="control-label" for="form-field-4">Адреса проживання</label>
 
                         <div class="controls">
                             <input type="text" name="home"  @if(isset($admin_resume)) value='{{$admin_resume->home}}' @endif id="form-field-4" placeholder="Місце народження" />
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="form-field-9">Мобільній телефон</label>
+
+                        <div class="controls">
+                            <input type="text" name="telephone"  @if(isset($admin_resume)) value='{{$admin_resume->telephone}}' @endif id="form-field-9" placeholder="Мобільній телефон" />
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="form-field-10">Домашній телефон</label>
+
+                        <div class="controls">
+                            <input type="text" name="home_telephone"  @if(isset($admin_resume)) value='{{$admin_resume->home_telephone}}' @endif id="form-field-10" placeholder="Домашній телефон" />
                         </div>
                     </div>
 
@@ -76,7 +92,7 @@
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label" for="form-field-6">Основна діяльність</label>
+                        <label class="control-label" for="form-field-6">Спеціальність</label>
 
                         <div class="controls">
                             <input type="text" name="specialty"  @if(isset($admin_resume)) value='{{$admin_resume->specialty}}' @endif id="form-field-6" placeholder="Основна діяльність" />
@@ -90,6 +106,13 @@
                             <input type="text" name="experience"  @if(isset($admin_resume)) value='{{$admin_resume->experience}}' @endif id="form-field-7" placeholder="Досвід роботи" />
                         </div>
                     </div>
+                    <div class="control-group">
+                        <label class="control-label" for="form-field-11">Володіння електроінструментом</label>
+
+                        <div class="controls">
+                            <input type="text" name="possession"  @if(isset($admin_resume)) value='{{$admin_resume->possession}}' @endif id="form-field-11" placeholder="Володіння електроінструментом" />
+                    </div>
+                    </div>
 
                     <div class="control-group">
                         <label class="control-label" for="form-field-8">Бажаний рівень ЗП</label>
@@ -99,13 +122,8 @@
                         </div>
                     </div>
 
-                    <div class="control-group">
-                        <label class="control-label" for="form-field-9">Контактний номер телефону</label>
 
-                        <div class="controls">
-                            <input type="text" name="telephone"  @if(isset($admin_resume)) value='{{$admin_resume->telephone}}' @endif id="form-field-9" placeholder="Контактний номер телефону" />
-                        </div>
-                    </div>
+
                     <div class="form-actions">
                         <a href='{{ $url }}/resume'>
                             <div class="btn btn-info">Повернутися до списку всіх резюме</div>

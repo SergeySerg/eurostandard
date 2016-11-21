@@ -23,6 +23,9 @@ class CreateResumeTable extends Migration {
 			$table->text('experience');
 			$table->text('salary');
 			$table->text('telephone');
+			$table->text('home_telephone');
+			$table->text('home_telephone');
+			$table->text('possession');
 			$table->timestamp('created_at');
 			$table->timestamp('updated_at');
 
