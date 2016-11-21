@@ -19,6 +19,8 @@ return [
 	'works' => 'Jobs',
 	'gallery' => 'Gallery',
 	'contacts' => 'Contacts',
+	'more' => 'More',
+	'latest_jobs' => 'Latest jobs',
 	/* End Header */
 	/* Gallery Page */
 	'gallerycontenttitle' => 'Галерея',

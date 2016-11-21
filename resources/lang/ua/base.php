@@ -20,6 +20,8 @@ return [
 	'works' => 'Вакансії',
 	'gallery' => 'Галерея',
 	'contacts' => 'Контакти',
+	'more' => 'Детальніше',
+	'latest_jobs' => 'Останні вакансії',
 	/* End Header */
 	/* Gallery Page */
 	'gallerycontenttitle' => 'Галерея',

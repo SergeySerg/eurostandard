@@ -152,7 +152,12 @@
         </div><!--#sidebar-shortcuts-->
 
         <ul class="nav nav-list">
-
+            <li @if(Request::is('*/main'))class="active"@endif>
+                <a href="{{ $url }}/articles/main">
+                    <i class="icon-list"></i>
+                    <span class="menu-text"> Головна </span>
+                </a>
+            </li>
             <li @if(Request::is('*/company'))class="active"@endif>
             <a href="{{ $url }}/articles/company">
                 <i class="icon-text-width"></i>

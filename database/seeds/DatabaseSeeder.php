@@ -51,7 +51,7 @@ class ArticlesSeeder extends Seeder {
         ]);
 
         Article::create([
-            'category_id' => 2,
+            'category_id' => 3,
             'title' => 'Міжнародний Економічний Форум|Międzynarodowe Forum Gospodarcze|International Economic Forum',
             'short_description' => 'У Форумі взяли участь близько 300 учасників, 50 доповідачів з 12 країн світу, серед яких інвестори, вчені, експерти, бізнесмени.
             |W Forum wzięło udział około 300 uczestników, 50 prelegentów z 12 krajów, w tym inwestorów, naukowców, ekspertów, przedsiębiorców, autoryzowany
@@ -64,7 +64,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 2,
+            'category_id' => 3,
             'title' => 'Збільшення пенсійного віку|Podniesienie wieku emerytalnego|Increasing the retirement age',
             'short_description' => "Пенсійний вік підвищуватимуть поступово, але список професій, які дають право дострокового виходу на пенсію, суттєво скоротять починаючи з...
              |Wiek emerytalny będzie stopniowo wzrastać, ale lista zawodów, które mają prawo do wcześniejszej emerytury, zmniejszają się znacznie od ...
@@ -77,7 +77,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 2,
+            'category_id' => 3,
             'title' => 'Польща вироблятиме власні електромобілі|Polska produkuje swoje samochody elektryczne|Poland produce their own electric cars',
             'short_description' => 'У 2017 році у Польщі з\'являться перші національні електромобілі, повідомляє Експрес.У Польщі набирає популярності проект національного електромобіля. У листопаді 2016 року оголосять конкурс з вироблення кузова для майбутнього авто.
             |W 2017 roku Polska będzie pierwszym narodowym samochodów elektrycznych, raporty Ekspres.U zyskuje popularność polskiego narodowego projektu elektrycznego. W listopadzie 2016 roku ogłoszono konkurs na opracowanie ciała dla przyszłych samochodów.
@@ -90,7 +90,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 2,
+            'category_id' => 3,
             'title' => 'Збільшення пенсійного віку|Podniesienie wieku emerytalnego|Increasing the retirement age',
             'short_description' => "Пенсійний вік підвищуватимуть поступово, але список професій, які дають право дострокового виходу на пенсію, суттєво скоротять починаючи з...
              |Wiek emerytalny będzie stopniowo wzrastać, ale lista zawodów, które mają prawo do wcześniejszej emerytury, zmniejszają się znacznie od ...
@@ -103,7 +103,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 2,
+            'category_id' => 3,
             'title' => 'Польща вироблятиме власні електромобілі|Polska produkuje swoje samochody elektryczne|Poland produce their own electric cars',
             'short_description' => 'У 2017 році у Польщі з\'являться перші національні електромобілі, повідомляє Експрес.У Польщі набирає популярності проект національного електромобіля. У листопаді 2016 року оголосять конкурс з вироблення кузова для майбутнього авто.
             |W 2017 roku Polska będzie pierwszym narodowym samochodów elektrycznych, raporty Ekspres.U zyskuje popularność polskiego narodowego projektu elektrycznego. W listopadzie 2016 roku ogłoszono konkurs na opracowanie ciała dla przyszłych samochodów.
@@ -116,7 +116,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 2,
+            'category_id' => 3,
             'title' => 'Збільшення пенсійного віку|Podniesienie wieku emerytalnego|Increasing the retirement age',
             'short_description' => "Пенсійний вік підвищуватимуть поступово, але список професій, які дають право дострокового виходу на пенсію, суттєво скоротять починаючи з...
              |Wiek emerytalny będzie stopniowo wzrastać, ale lista zawodów, które mają prawo do wcześniejszej emerytury, zmniejszają się znacznie od ...
@@ -129,7 +129,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 2,
+            'category_id' => 3,
             'title' => 'Польща вироблятиме власні електромобілі|Polska produkuje swoje samochody elektryczne|Poland produce their own electric cars',
             'short_description' => 'У 2017 році у Польщі з\'являться перші національні електромобілі, повідомляє Експрес.У Польщі набирає популярності проект національного електромобіля. У листопаді 2016 року оголосять конкурс з вироблення кузова для майбутнього авто.
             |W 2017 roku Polska będzie pierwszym narodowym samochodów elektrycznych, raporty Ekspres.U zyskuje popularność polskiego narodowego projektu elektrycznego. W listopadzie 2016 roku ogłoszono konkurs na opracowanie ciała dla przyszłych samochodów.
@@ -143,7 +143,7 @@ class ArticlesSeeder extends Seeder {
         ]);
 
         Article::create([
-            'category_id' => 3,
+            'category_id' => 4,
             'title' => 'Зварювальник|Spawacz|Welder',
             "short_description" => "Потрібні зварювальники з досвідом роботи для зварювання труб для водопостачання та пожежогасіння. Роботи по місту Києву. Повне завантаження. Офіційне працевлаштування. Можливе розселення.
             |Szukam spawaczy z doświadczeniem w spawaniu rur do wody i ognia. Pracuje dla miasta Kijowa. Full download. Dziennik zatrudnienia. Możliwe rozliczenie.
@@ -157,7 +157,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 3,
+            'category_id' => 4,
             'title' => 'Водії кат.С Е|Kierowcy kat.C E|Drivers Cat.C E',
             "short_description" => "Робота в Варшаві, повна зайнятість.Водії кат. З ЕРобота по всій Европе, в Місяці водії наїждяють до 10.000 км.ФедьЕвНусе, Sp. z o.o. , Варшава
             |Praca w Warszawie, pełne zaynyatist.Vodiyi kota. Z ERobota całej Europie, kierowcy Księżyc nayizhdyayut do 10000 km.FedEvNuse, Sp. z o.o. Warszawa
@@ -171,7 +171,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 3,
+            'category_id' => 4,
             'title' => 'Виробництво тентів і бічних штор Roland International Polska|Produkcja wychyleń oraz boczne kurtyny Roland International Polska|Production of tilts and side curtains Roland International Polska',
             "short_description" => 'Вакансія: робітник на виробництво (Roland International Polska) FedJobHouse, Sp. z o.o. , Варшава
             |Praca: Pracownik Produkcji (na Roland International Polska) Fedyobґouse, Sp. z o.o. Warszawa
@@ -209,7 +209,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 3,
+            'category_id' => 4,
             'title' => 'Зварювальник|Spawacz|Welder',
             "short_description" => "Потрібні зварювальники з досвідом роботи для зварювання труб для водопостачання та пожежогасіння. Роботи по місту Києву. Повне завантаження. Офіційне працевлаштування. Можливе розселення.
             |Szukam spawaczy z doświadczeniem w spawaniu rur do wody i ognia. Pracuje dla miasta Kijowa. Full download. Dziennik zatrudnienia. Możliwe rozliczenie.
@@ -223,7 +223,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 3,
+            'category_id' => 4,
             'title' => 'Водії кат.С Е|Kierowcy kat.C E|Drivers Cat.C E',
             "short_description" => "Робота в Варшаві, повна зайнятість.Водії кат. З ЕРобота по всій Европе, в Місяці водії наїждяють до 10.000 км.ФедьЕвНусе, Sp. z o.o. , Варшава
             |Praca w Warszawie, pełne zaynyatist.Vodiyi kota. Z ERobota całej Europie, kierowcy Księżyc nayizhdyayut do 10000 km.FedEvNuse, Sp. z o.o. Warszawa
@@ -237,7 +237,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 3,
+            'category_id' => 4,
             'title' => 'Зварювальник|Spawacz|Welder',
             "short_description" => "Потрібні зварювальники з досвідом роботи для зварювання труб для водопостачання та пожежогасіння. Роботи по місту Києву. Повне завантаження. Офіційне працевлаштування. Можливе розселення.
             |Szukam spawaczy z doświadczeniem w spawaniu rur do wody i ognia. Pracuje dla miasta Kijowa. Full download. Dziennik zatrudnienia. Możliwe rozliczenie.
@@ -251,7 +251,7 @@ class ArticlesSeeder extends Seeder {
             'active' => true,
         ]);
         Article::create([
-            'category_id' => 3,
+            'category_id' => 4,
             'title' => 'Водії кат.С Е|Kierowcy kat.C E|Drivers Cat.C E',
             "short_description" => "Робота в Варшаві, повна зайнятість.Водії кат. З ЕРобота по всій Европе, в Місяці водії наїждяють до 10.000 км.ФедьЕвНусе, Sp. z o.o. , Варшава
             |Praca w Warszawie, pełne zaynyatist.Vodiyi kota. Z ERobota całej Europie, kierowcy Księżyc nayizhdyayut do 10000 km.FedEvNuse, Sp. z o.o. Warszawa
@@ -322,20 +322,26 @@ class CategoriesSeeder extends Seeder {
 
         Category::create([
             'id' => "1",
+            'name' => 'Головна',
+            'link' => 'main',
+            'fields' => '["title","short_description","description"]',
+        ]);
+        Category::create([
+            'id' => "2",
             'name' => 'Про компанію',
             'link' => 'company',
             'fields' => '["title","short_description","description"]',
         ]);
 
         Category::create([
-            'id' => "2",
+            'id' => "3",
             'name' => 'Новини',
             'link' => 'news',
             'fields' => '["title","short_description","description","gallery","date","priority","active"]',
         ]);
 
         Category::create([
-            'id' => "3",
+            'id' => "4",
             'name' => 'Вакансії',
             'link' => 'works',
             'fields' => '["title","short_description","description","gallery","priority","active","price"]',
@@ -349,14 +355,14 @@ class CategoriesSeeder extends Seeder {
          ]);*/
 
         Category::create([
-            'id' => "4",
+            'id' => "5",
             'name' => 'Галерея',
             'link' => 'gallery',
             'fields' => '["title","short_description","description","gallery","priority","active"]',
         ]);
 
         Category::create([
-            'id' => "5",
+            'id' => "6",
             'name' => 'Слайдер',
             'link' => 'slider',
             'fields' => '["title","short_description","description","gallery","priority","active"]',

@@ -152,7 +152,9 @@
 			<div class="col-sm-6 col-md-6 text-center wow fadeInDown">
 
 				<i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
-				<p>43016, Україна, м.Луцьк, вул.Драгоманова, 1а <br>84100, Poland, Puck, ul.Zamkova, 13 </p>
+				<p>	{{  $texts->get('header.address') }}<br>
+					{{  $texts->get('header.address_poland') }}
+				</p>
 
 			</div>
 
@@ -160,8 +162,8 @@
 
 				<i class="fa fa-phone fa-3x" aria-hidden="true"></i>
 				<ul class="phone">
-					<li>+38 (123) 456 - 78 - 90</li>
-					<li>+38 (123) 456 - 78 - 90</li>
+					<li>{{  $texts->get('header.tel1') }}</li>
+					<li>{{  $texts->get('header.tel2') }}</li>
 				</ul>
 			</div>
 

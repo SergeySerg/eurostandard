@@ -87,7 +87,7 @@ Route::group(['prefix'=>'admin30x5', 'middleware' => ['auth', 'backend.init']], 
 });
 
 Route::group(['middleware' => 'frontend.init'], function(){
-	Route::get('/{lang}/{type?}', 'Frontend\ArticleController@index')->where('type', 'company|news|works|events|gallery|contact');
+	Route::get('/{lang}/{type?}', 'Frontend\ArticleController@index')->where('type', 'main|company|news|works|events|gallery|contact');
 });
 
 

@@ -22,14 +22,15 @@ class ArticleController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index($lang, $type = 'company')
+	public function index($lang, $type = 'main')
 	{
-		$events = null;
-		$gallery = null;
+		$company = null;
+		$news = null;
+		$works = null;
 		$slides = null;
-
+		$gallery = null;
 		switch($type){
-            case 'hotel':
+            case 'main':
 				$slides = Category::where('link','=', 'slider')
 					->first()
 					->articles()
@@ -38,15 +39,11 @@ class ArticleController extends Controller {
 					->sortByDesc("priority");
 				//dd($slides);
 				break;
-			case 'rooms':
+			case 'company':
 				break;
-			case 'services':
+			case 'news':
 				break;
-			case 'events':
-                $events = Category::where('link','=', 'events')
-                    ->first()
-                    ->articles
-					->sortByDesc("priority");
+			case 'work':
 				break;
 			case 'gallery':
                 $gallery = Category::where('link','=', 'gallery')
@@ -56,14 +53,14 @@ class ArticleController extends Controller {
 					->get()
 					->sortByDesc("priority");
 				break;
-
+			case 'slider':
+				break;
 		}
 
 		 $meta = view()->share('meta', Article::where('name', '=', 'meta.'.$type)->first());
 
 
 		return view('frontend.'.$type, [
-			'events' => $events,
 			'gallery' => $gallery,
 			'slides' => $slides,
 
