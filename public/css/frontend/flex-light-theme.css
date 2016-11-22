@@ -1,0 +1,35 @@
+body{
+    background-image: url("http://yeap.narod.ru/global/files/textures/01.jpg")
+}
+.panel-default>.panel-heading{
+    background: none;
+}
+.jumbotron, .panel, .progress, .well, .tab-content {
+    border: 1px solid #75caeb;
+}
+.panel, .tab-content {
+    border-width: 0 0px 4px;
+    box-shadow: 0 0 15px rgba(0,0,0, .15);
+}
+.tab-content{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 7px 15px 0 rgba(0,0,0, .15);
+}
+.tab-content p img.thumbnail{
+    max-width: 200px;
+    float: left;
+    margin-right: 20px;
+}
+.nav-tabs>li.active{
+    border-bottom:1px solid #75caeb;
+}
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #75caeb;
+    box-shadow: 0 0 15px rgba(0,0,0, .15);
+}
+.navbar {
+    border-width: 0 0 4px;
+}
