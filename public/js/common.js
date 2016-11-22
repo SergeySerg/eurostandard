@@ -35,6 +35,23 @@ $(function(){
         gallery_max_height: 300,
     });
     /* END  галлерея на странице компании*/
+    
+    /* альбомы на странице галлереи */
+    $('.flex-gallery').each(function(){
+        $(this).unitegallery({
+            gallery_theme: "tilesgrid",
+            gallery_width:"100%",              //gallery width
+            grid_space_between_cols:20,
+            grid_space_between_rows:20,
+            grid_space_between_mobile:0,
+            tile_enable_border:true,
+            tile_enable_shadow:false,
+            grid_padding:0,
+            tile_width: 150,
+            grid_num_rows:10
+        });
+    });
+    /* END  альбомы на странице галлереи */
 
     /* появление меню при скроле */
     $(window).on('scroll', function(){

@@ -158,6 +158,7 @@
 
 <script src="{{ asset('/libs/unitegallery/dist/themes/slider/ug-theme-slider.js') }}"></script>
 <script src="{{ asset('/libs/unitegallery/dist/themes/carousel/ug-theme-carousel.js') }}"></script>
+<script src="{{ asset('/libs/unitegallery/dist/themes/tilesgrid/ug-theme-tilesgrid.js') }}"></script>
 <script src="{{ asset('/js/plugins/sweetalert.min.js') }}"></script>
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

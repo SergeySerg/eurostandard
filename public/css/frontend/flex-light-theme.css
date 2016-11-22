@@ -11,6 +11,9 @@ body{
     border-width: 0 0px 4px;
     box-shadow: 0 0 15px rgba(0,0,0, .15);
 }
+.panel-body nav{
+    text-align: center;
+}
 .tab-content{
     margin-bottom: 20px;
     background-color: #fff;
@@ -32,4 +35,21 @@ body{
 }
 .navbar {
     border-width: 0 0 4px;
+}
+.pagination>li>a, .pagination>li>span, .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+    background-color: #158CBA;
+    border-color: #127BA3;
+    color: #fff;
+}
+.pager>li.active>a, .pagination>li.active>a {
+    top: 1px;
+    border-bottom-width: 3px;
+}
+.r-block-item .news-date{
+    margin-left: 10px;
+    font-weight: bold;
+}
+.works-atribute{
+    display: inline-block;
+    margin-right: 20px;
 }

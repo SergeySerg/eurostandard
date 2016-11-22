@@ -48,7 +48,8 @@ ul{
 }
 .panel-default>.panel-heading{
     border-bottom:1px solid #75CAEB;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
 }
 .panel-body a{
     padding-bottom: 10px;
