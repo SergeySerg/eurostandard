@@ -48,7 +48,8 @@ ul{
 }
 .panel-default>.panel-heading{
     border-bottom:1px solid #75CAEB;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
 }
 .panel-body a{
     padding-bottom: 10px;
@@ -108,6 +109,9 @@ footer .navbar-text{
     margin: 0;
     padding: 0;
 }
+.address{
+    width: 250px;
+}
 .navbar-default .navbar-text{
     font-size: 26px;
     color: #00B2CC;
@@ -116,6 +120,12 @@ footer .navbar-text{
 .navbar-brand>img{
     width: 80px;
     margin-top: 0;
+}
+
+.address-block h3{
+    margin-top: 0;
+    text-align: center;
+    font-weight: bold;
 }
 /*===================================================*/
 .navbar-fixed-top{

@@ -1,0 +1,61 @@
+body{
+    background-image: url("http://yeap.narod.ru/global/files/textures/01.jpg")
+}
+.panel-default>.panel-heading{
+    background: none;
+}
+.jumbotron, .panel, .progress, .well, .tab-content {
+    border: 1px solid #75caeb;
+}
+.panel, .tab-content {
+    border-width: 0 0px 4px;
+    box-shadow: 0 0 15px rgba(0,0,0, .15);
+}
+.panel-body nav{
+    text-align: center;
+}
+.tab-content{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 7px 15px 0 rgba(0,0,0, .15);
+}
+.tab-content p img.thumbnail{
+    max-width: 200px;
+    float: left;
+    margin-right: 20px;
+}
+.nav-tabs>li.active{
+    border-bottom:1px solid #75caeb;
+}
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #75caeb;
+    box-shadow: 0 0 15px rgba(0,0,0, .15);
+}
+.navbar {
+    border-width: 0 0 4px;
+}
+.pagination>li>a, .pagination>li>span, .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+    background-color: #158CBA;
+    border-color: #127BA3;
+    color: #fff;
+}
+.pager>li.active>a, .pagination>li.active>a {
+    top: 1px;
+    border-bottom-width: 3px;
+}
+.r-block-item .news-date{
+    margin-left: 10px;
+    font-weight: bold;
+}
+.works-atribute{
+    display: inline-block;
+    margin-right: 20px;
+}
+.fa-3x {
+    width: 50px;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 20px;
+}
