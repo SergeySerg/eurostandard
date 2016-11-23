@@ -40,7 +40,10 @@
 
 	<div class="row">
 
-		<ul class="col-md-12 text-right lang">
+		<div class="col-md-6 resume-block">
+			<a class="main-resume" href="/{{ App::getLocale() }}/resume">{{ trans('base.resume') }}</a>
+		</div>
+		<ul class="col-md-6 text-right lang">
 			@foreach($langs as $lang)
 				<li><a href="{{str_replace(url(App::getLocale()), url($lang->lang), Request::url())}}">{{$lang -> lang}}</a></li>
 			@endforeach

@@ -19,6 +19,7 @@ return [
 	'works' => 'Praca',
 	'gallery' => 'Galeria',
 	'contacts' => 'Kontakt',
+	'resume' => 'Wysyłać CV',
 	'more' => 'Więcej',
 	'latest_jobs' => 'Najnowsze oferty pracy',
 	/* End Header */

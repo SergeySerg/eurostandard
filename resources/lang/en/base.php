@@ -19,6 +19,7 @@ return [
 	'works' => 'Jobs',
 	'gallery' => 'Gallery',
 	'contacts' => 'Contacts',
+	'resume' => 'Send CV',
 	'more' => 'More',
 	'latest_jobs' => 'Latest jobs',
 	/* End Header */

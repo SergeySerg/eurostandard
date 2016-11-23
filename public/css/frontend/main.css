@@ -161,6 +161,25 @@ footer .navbar-text{
     font-size: 20px;
     text-transform: none;
 }
+a.main-resume{
+    display: block;
+    height: 40px;
+    width: 200px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-bottom: 4px solid #75CAEB;
+}
+a.main-resume:hover{
+    border-bottom-width:2px;
+}
+.resume-block{
+    margin-top: 10px;
+}
 /*===================================================*/
 .navbar-fixed-top{
     opacity: .9;
