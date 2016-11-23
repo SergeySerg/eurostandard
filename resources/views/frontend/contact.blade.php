@@ -2,70 +2,109 @@
 
 @section('content')
 
-
     <div class="row">
 
-        <div class="col-md-12">
-            <!-- start: Slider -->
-            <div id="webstudio-slider" style="display:none;
-                                              margin-bottom: 20px;
-                                              border-radius: 5px;
-                                              box-shadow: 0 0 15px rgba(0,0,0, .15);">
-                @foreach($slides as $slide)
+        <div class="col-md-8">
 
-                    @if(count($slide->getImages()) > 0)
+            <div class="panel panel-default wow fadeInDown">
 
-                        <img alt="{{$slide->getTranslate('title')}}" src="/{{$slide->getImages()[0]['full']}}"
-                             data-image="/{{$slide->getImages()[0]['full']}}"
-                             id="img-{{$slide->id}}"
-                             data-description=" {{$slide->getTranslate('description')}}"
-                             data-link="jhjhjhj111">
+                <div class="panel-body">
 
-                    @endif
+                    <div class="col-md-6 map">
 
-                @endforeach
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.925238582015!2d25.31572461537181!3d50.73987547951628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599ecacee2c15%3A0x40fb686bcd4d789e!2z0LLRg9C70LjRhtGPINCU0YDQsNCz0L7QvNCw0L3QvtCy0LAsIDcsINCb0YPRhtGM0LosINCS0L7Qu9C40L3RgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDQzMDAw!5e0!3m2!1sru!2sru!4v1479893729392" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <h3>Офіс №1</h3>
+                        <i class="fa fa-phone fa-3x" aria-hidden="true"></i>
+                        <ul class="phone">
+                            <li>{{  $texts->get('header.tel1') }}</li>
+                            <li>{{  $texts->get('header.tel2') }}</li>
+                        </ul>
+                        <br>
+                        <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+                        <ul class="phone">
+                            <li>info&#064;eustandard.com.ua</li>
+                            <li>admin&#064;eustandard.com.ua</li>
+                        </ul>
+
+                        <br>
+                        <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+                        <ul class="phone">
+                            <li>{{  $texts->get('header.address') }}</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
             </div>
-            <!-- end: Slider -->
 
         </div>
 
-    </div>
+        <div class="col-sm-4 col-md-4">
 
-    <!--start: Row -->
+            <div class="panel panel-default wow fadeInDown">
 
-    <div class="row">
-
-        <div class="col-md-12">
-
-            <div class="panel panel-default wow fadeInLeft">
-                <div class="panel-heading"> {{ $main->getTranslate('title') }}</div>
+                <div class="panel-heading">Останні вакансії</div>
 
                 <div class="panel-body">
-                    <div class="col-sm-4 col-md-3">
-                        <a href="#" class="thumbnail">
-                            @if(count($main->getImages()) > 0)
-                                 <img src="/{{$main->getImages()[0]['min']}}" alt="...">
-                            @endif
-                        </a>
+
+                    <div class="row">
+
+                        <div class="r-block-item">
+
+                            <div class="col-md-12">
+
+                                <h4 class="col-sm-6 col-md-6 text-left r-prof">Зварювальник </h4>
+
+                                <h4 class="col-sm-6 col-md-6 text-right r-price">з/п від 10000грн</h4>
+
+                                <p>Потрібні зварювальники з досвідом роботи для зварювання труб для водопостачання та пожежогасіння.
+                                    Роботи по місту Києву. Повне завантаження. Офіційне працевлаштування. Можливе розселення.
+                                </p>
+
+                                <a href="#" class="pull-right">Детальніше<i class="fa fa-angle-right fa-lg"></i></a>
+
+                            </div>
+
+                            <hr>
+
+                        </div>
+
                     </div>
-                    <div class="col-sm-8 col-md-9">
-                        {!! $main->getTranslate('short_description') !!}
-                        <a href="#" class="pull-right">{{ trans('base.more') }}<i class="fa fa-angle-right fa-lg"></i></a>
+
+                    <div class="row">
+
+                        <div class="r-block-item">
+
+                            <div class="col-md-12">
+
+                                <h4 class="col-sm-6 col-md-6 text-left r-prof">Архітектор</h4>
+
+                                <h4 class="col-sm-6 col-md-6 text-right r-price">з/п від 15000грн</h4>
+
+                                <p>Будівельна компанія шукає архітектора для співпраці над новим великим та сучасним проектом
+                                    житлового комплексу «Scandia». Вимоги: вік від 25−40 років; володіння програмами: ARCHICAD,
+                                    AUTOCAD, 3DMAX (Corona, V-Ray)...
+                                </p>
+
+                                <a href="#" class="pull-right">Детальніше<i class="fa fa-angle-right fa-lg"></i></a>
+
+                            </div>
+
+                        </div>
+
                     </div>
-                    <div class="col-sm-8 col-md-9" style="display: none">
-                        {!!$main->getTranslate('description') !!}
-                        <a href="#" class="pull-right">{{ trans('base.more') }}<i class="fa fa-angle-right fa-lg"></i></a>
-                    </div>
+
+                    <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="#" role="button">Всі вакансії</a></p>
+
                 </div>
             </div>
 
-        </div>
-
-    </div>
-
-    <div class="row">
-
-        <div class="col-sm-6 col-md-6">
 
             <div class="panel panel-default wow fadeInUp">
                 <div class="panel-heading">Останні новини</div>
@@ -74,14 +113,14 @@
 
                     <div class="row">
                         <div class="r-block-item">
+                            <div class="col-md-12"><h4>Міжнародний Економічний Форум</h4></div>
                             <div class="col-md-4">
                                 <a href="#" class="thumbnail">
-                                    <img src="http://www.economtermin.ru/uploads/fotos/2/3/1.jpg" style="height:93px" alt="...">
+                                    <img src="http://www.economtermin.ru/uploads/fotos/2/3/1.jpg" alt="...">
                                 </a>
                             </div>
 
                             <div class="col-md-8">
-                                <h4>Міжнародний Економічний Форум</h4>
                                 <p>У Форумі взяли участь близько 300 учасників, 50 доповідачів з 12 країн світу,
                                     серед яких інвестори, вчені, експерти, бізнесмени, повноважні...
                                 </p>
@@ -93,14 +132,14 @@
 
                     <div class="row">
                         <div class="r-block-item">
+                            <div class="col-md-12"><h4>Збільшення пенсійного віку</h4></div>
                             <div class="col-md-4">
                                 <a href="#" class="thumbnail">
-                                    <img src="http://www.volynpost.com/img/modules/news/6/78/64cdbd95dff5a702f82bee8dc6cf5786/top-photo.jpg" style="height:93px" alt="...">
+                                    <img src="http://www.volynpost.com/img/modules/news/6/78/64cdbd95dff5a702f82bee8dc6cf5786/top-photo.jpg" alt="...">
                                 </a>
                             </div>
 
                             <div class="col-md-8">
-                                <h4>Збільшення пенсійного віку</h4>
                                 <p>Пенсійний вік підвищуватимуть поступово, але список професій, які дають право
                                     дострокового виходу на пенсію, суттєво скоротять починаючи з...
                                 </p>
@@ -109,42 +148,14 @@
                         </div>
                     </div>
 
-                    <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/news" role="button">Всі новини</a></p>
+                    <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="#" role="button">Всі новини</a></p>
 
                 </div>
             </div>
 
         </div>
-        <div class="col-sm-6 col-md-6">
 
-            <div class="panel panel-default wow fadeInDown">
-                <div class="panel-heading">{{ trans('base.latest_jobs') }}</div>
-
-                <div class="panel-body">
-
-                    <div class="row">
-                        @foreach($last_works as $last_work)
-                            <div class="r-block-item">
-                                <div class="col-md-12">
-                                    <h4 class="col-sm-6 col-md-6 text-left r-prof">{{ $last_work->getTranslate('title') }}</h4>
-                                    <h4 class="col-sm-6 col-md-6 text-right r-price">з/п від {{ $last_work->getTranslate('price') }} грн</h4>
-                                    <p>{{ $last_work->getTranslate('short_description') }}
-                                    </p>
-                                    <a href="#" class="pull-right">{{ trans('base.more') }}<i class="fa fa-angle-right fa-lg"></i></a>
-                                </div>
-                                <hr>
-                            </div>
-                        @endforeach
-                    </div>
-
-                    <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/works" role="button">Всі вакансії</a></p>
-
-                </div>
-            </div>
-
-        </div>
 
     </div>
-    <!-- Example row of columns -->
 
 @endsection

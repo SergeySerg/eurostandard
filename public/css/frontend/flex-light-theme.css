@@ -53,3 +53,9 @@ body{
     display: inline-block;
     margin-right: 20px;
 }
+.fa-3x {
+    width: 50px;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 20px;
+}
