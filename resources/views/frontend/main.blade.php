@@ -123,7 +123,7 @@
                 <div class="panel-body">
 
                     <div class="row">
-                        @foreach($last_works as $last_work)
+                        @foreach($works->getLast(2) as $last_work)
                             <div class="r-block-item">
                                 <div class="col-md-12">
                                     <h4 class="col-sm-6 col-md-6 text-left r-prof">{{ $last_work->getTranslate('title') }}</h4>
