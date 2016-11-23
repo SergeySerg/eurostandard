@@ -44,8 +44,6 @@ class Article extends Translate {
     }
     public function getLast($cnt){
         return $this
-            ->first()
-            ->articles()
             ->where('active','=', 1)
             ->orderBy("priority", 'desc')
             ->take($cnt)

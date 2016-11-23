@@ -123,12 +123,12 @@
                 <div class="panel-body">
 
                     <div class="row">
-                        @foreach($works->getLast(2) as $last_work)
+                        @foreach($works->getLast(2) as $work)
                             <div class="r-block-item">
                                 <div class="col-md-12">
-                                    <h4 class="col-sm-6 col-md-6 text-left r-prof">{{ $last_work->getTranslate('title') }}</h4>
-                                    <h4 class="col-sm-6 col-md-6 text-right r-price">з/п від {{ $last_work->getTranslate('price') }} грн</h4>
-                                    <p>{{ $last_work->getTranslate('short_description') }}
+                                    <h4 class="col-sm-6 col-md-6 text-left r-prof">{{ $work->getTranslate('title') }}</h4>
+                                    <h4 class="col-sm-6 col-md-6 text-right r-price">з/п від {{ $work->getTranslate('price') }} грн</h4>
+                                    <p>{{ $work->getTranslate('short_description') }}
                                     </p>
                                     <a href="#" class="pull-right">{{ trans('base.more') }}<i class="fa fa-angle-right fa-lg"></i></a>
                                 </div>
