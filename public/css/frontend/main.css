@@ -109,6 +109,9 @@ footer .navbar-text{
     margin: 0;
     padding: 0;
 }
+.address{
+    width: 250px;
+}
 .navbar-default .navbar-text{
     font-size: 26px;
     color: #00B2CC;
@@ -117,6 +120,12 @@ footer .navbar-text{
 .navbar-brand>img{
     width: 80px;
     margin-top: 0;
+}
+
+.address-block h3{
+    margin-top: 0;
+    text-align: center;
+    font-weight: bold;
 }
 /*===================================================*/
 .navbar-fixed-top{
