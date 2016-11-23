@@ -127,6 +127,40 @@ footer .navbar-text{
     text-align: center;
     font-weight: bold;
 }
+#resume-form{
+    padding: 0 20px;
+}
+#resume-form input,
+#resume-form textarea,
+#resume-form label,
+#resume-form-file input,
+#resume-form-file textarea,
+#resume-form-file label{
+    width: 48%;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+#resume-form p,
+#resume-form-file p{
+    text-align: center;
+}
+#resume-form label,
+#resume-form-file label{
+    float: left;
+}
+#resume-form input,
+#resume-form textarea,
+#resume-form-file input,
+#resume-form-file textarea{
+    float: right;
+}
+#resume-form input[type=submit],
+#resume-form-file input[type=submit]{
+    float: none;
+    width: 100%;
+    font-size: 20px;
+    text-transform: none;
+}
 /*===================================================*/
 .navbar-fixed-top{
     opacity: .9;

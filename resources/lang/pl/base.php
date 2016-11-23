@@ -25,14 +25,23 @@ return [
 	/* Gallery Page */
 	'gallerycontenttitle' => 'Галерея',
 	/* End Gallery Page */
+	/* Resume*/
+	'resume.makeresume' => 'Tworzyć i wysyłać CV',
+	'resume.sendresume' => 'Wyślij gotowe CV',
+	'resume.name' => 'Imię Nazwisko',
+	'resume.birth' => 'Data urodzenia',
+	'resume.address' => 'Adres zamieszkania',
+	'resume.mobile' => 'Telefon komórkowy',
+	'resume.homephone' => 'Telefon domowy',
+	'resume.education' => 'Edukacja',
+	'resume.profession' => 'Specjalność',
+	'resume.experience' => 'Doświadczenie',
+	'resume.experiencedescribe' => '(ostatnie miejsce zatrudnienia, stanowisko, obowiązki)',
+	'resume.tool' => 'Charakterystyka elektronarzędzia',
+	'resume.salary' => 'Korzystne zarobki',
+	'resume.file' => 'Dołączanie pliku podsumowanie',
+	/* End Resume*/
 	/* Footer*/
-	'hotelphoto' => 'Фото готелю',
-	'callback' => 'Напишіть нам',
-	'name' => 'Ваше ім\'я',
-	'email' => 'Ваш e-mail',
-	'message' => 'Текст повідомлення',
-	'send' => 'Відправити',
+	'send' => 'Wysłać',
 	/* End Footer */
-
-
 ];

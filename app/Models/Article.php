@@ -42,13 +42,4 @@ class Article extends Translate {
             return [];
         }
     }
-    public function getLast($cnt){
-        return $this
-            ->first()
-            ->articles()
-            ->where('active','=', 1)
-            ->orderBy("priority", 'desc')
-            ->take($cnt)
-            ->get();
-    }
 }
