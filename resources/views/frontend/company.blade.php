@@ -104,7 +104,8 @@
 
     </div>
 
-    <div class="col-sm-4 col-md-4">
+
+        <div class="col-sm-4 col-md-4">
 
         <div class="panel panel-default wow fadeInDown">
             <div class="panel-heading">Останні вакансії</div>

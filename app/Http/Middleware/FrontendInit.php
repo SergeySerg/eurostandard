@@ -42,9 +42,13 @@ class FrontendInit {
 			->first()
 			->articles();
 
-		$works = Category::where('link','=', 'works')
+		$last_works = Category::where('link','=', 'works')
 			->first()
-			->articles();
+			->articles()
+			->where('active','=', 1)
+			->orderBy("priority", 'desc')
+			->take(2)
+			->get();
 		//dd($works);
 		$texts = new Text();
 
@@ -52,7 +56,7 @@ class FrontendInit {
 		view()->share('langs', Lang::all());
 		view()->share('company', $company);
 		view()->share('news', $news);
-		view()->share('works', $works);
+		view()->share('last_works', $last_works);
 		view()->share('texts', $texts->init());
 		view()->share('version', config('app.version'));
 		view()->share('main', $main);

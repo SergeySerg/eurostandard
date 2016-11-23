@@ -19,7 +19,7 @@
 
 
     @if(isset($admin_resume))
-        <li class="active">{{$admin_resume->id}}</li>
+        <li class="active">{{$admin_resume->name}}</li>
     @endif
 @stop
 
