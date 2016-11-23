@@ -25,13 +25,24 @@ return [
 	/* Gallery Page */
 	'gallerycontenttitle' => 'Галерея',
 	/* End Gallery Page */
+	/* Resume*/
+	'resume.makeresume' => 'Form and send resume',
+	'resume.sendresume' => 'Send resume ready',
+	'resume.name' => 'Full name',
+	'resume.birth' => 'Date of birth',
+	'resume.address' => 'Address of residence',
+	'resume.mobile' => 'Mobile phone',
+	'resume.homephone' => 'Phone home',
+	'resume.education' => 'Education',
+	'resume.profession' => 'Specialty',
+	'resume.experience' => 'Experience',
+	'resume.experiencedescribe' => '(last place of employment, position, duties)',
+	'resume.tool' => 'Characteristics power tools',
+	'resume.salary' => 'Preferred salary',
+	'resume.file' => 'Attach file summary',
+	/* End Resume*/
 	/* Footer*/
-	'hotelphoto' => 'Фото готелю',
-	'callback' => 'Напишіть нам',
-	'name' => 'Ваше ім\'я',
-	'email' => 'Ваш e-mail',
-	'message' => 'Текст повідомлення',
-	'send' => 'Відправити',
+	'send' => 'Send',
 	/* End Footer */
 
 

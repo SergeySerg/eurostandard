@@ -38,24 +38,28 @@ class FrontendInit {
 			->first()
 			->articles
 			->first();
-		$news = Category::where('link','=', 'news')
-			->first()
-			->articles();
-
-		$last_works = Category::where('link','=', 'works')
+		$last_news = Category::where('link','=', 'news')
 			->first()
 			->articles()
-			->where('active','=', 1)
+			->where('active','=', '1')
 			->orderBy("priority", 'desc')
 			->take(2)
 			->get();
-		//dd($works);
+		$last_works = Category::where('link','=', 'works')
+			->first()
+			->articles()
+			->where('active','=', '1')
+			->orderBy("priority", 'desc')
+			->take(2)
+			->get();
+
+		//dd($last_works);
 		$texts = new Text();
 
 		// Share to views global template variables
 		view()->share('langs', Lang::all());
 		view()->share('company', $company);
-		view()->share('news', $news);
+		view()->share('last_news', $last_news);
 		view()->share('last_works', $last_works);
 		view()->share('texts', $texts->init());
 		view()->share('version', config('app.version'));

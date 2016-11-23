@@ -42,5 +42,4 @@ class Article extends Translate {
             return [];
         }
     }
-
 }

@@ -26,13 +26,23 @@ return [
 	/* Gallery Page */
 	'gallerycontenttitle' => 'Галерея',
 	/* End Gallery Page */
+	/* Resume*/
+	'resume.makeresume' => 'Сформувати і відправити резюме',
+	'resume.sendresume' => 'Відправити готове резюме',
+	'resume.name' => 'ПІБ',
+	'resume.birth' => 'Дата народження',
+	'resume.address' => 'Адреса проживання',
+	'resume.mobile' => 'Телефон мобільний',
+	'resume.homephone' => 'Телефон домашній',
+	'resume.education' => 'Освіта',
+	'resume.profession' => 'Спеціальність',
+	'resume.experience' => 'Досвід роботи',
+	'resume.experiencedescribe' => '(останнє місце роботи, посада, обов\'язки)',
+	'resume.tool' => 'Володіння електроінструментом',
+	'resume.salary' => 'Бажаний рівень зп',
+	'resume.file' => 'Прикріпити файл резюме',
+	/* End Resume*/
 	/* Footer*/
-	'hotelphoto' => 'Фото готелю',
-	'callback' => 'Напишіть нам',
-	'name' => 'Ваше ім\'я',
-	'email' => 'Ваш e-mail',
-	'message' => 'Текст повідомлення',
-	'send' => 'Відправити',
+	'send' => 'Надіслати',
 	/* End Footer */
-
 ];
