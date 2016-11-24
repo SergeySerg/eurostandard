@@ -8,10 +8,14 @@ class Resume extends Model {
         'name',
         'date_birthday',
         'home',
+        'telephone',
+        'home_telephone',
         'education',
         'specialty',
         'experience',
+        'possession',
         'salary',
+        'files',
         'created_at'
     ];
 

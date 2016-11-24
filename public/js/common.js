@@ -119,6 +119,85 @@ document.addEventListener("DOMContentLoaded", function(){
         },"json");
 
     });
+    /* END Скрипт формы обратной связи */
 });
-/* END Скрипт формы обратной связи */
+/* Скрипт для отправки резюме с сайта */
+document.addEventListener("DOMContentLoaded", function(){
+    /*Start script for comments*/
+    $('#resume-send').on('click', function(event){
+        var data = $('form#resume-form').serialize();
+        $.ajax({
+            url: 'resume',
+            method: "POST",
+            data: data,
+            dataType : "json",
+            success: function(data){
+                console.info('Server response: ', data);
+                if(data.status == 'success'){
+                    swal ("Ваше резюме успішно відправлено!");
+                    jQuery("#resume-form").trigger("reset");
 
+
+                }else{
+                    swal("Будь ласка введіть всі дані!");
+                    $("#resume-send").attr('disabled', false);
+                }
+
+            },
+            error:function(data){
+                swal ("Сталася помилка при відправці резюме!");
+              //  jQuery("#resume-form").trigger("reset");
+            }
+        },"json");
+        event.preventDefault();
+
+    });
+    /*End script for comments*/
+});
+/* END Скрипт для отправки резюме с сайта */
+/* Скрипт для отправки готового резюме */
+document.addEventListener("DOMContentLoaded", function(){
+    /*Start script for comments*/
+    $('#resume-send-file').on('click', function(event){
+        var files = $("input[name=files]").val();
+       var data = $('form#resume-form-file').serialize();
+     //   var name = $("input[name=name]").val();
+      //  var telephone = $("input[name=telephone]").val();
+
+     //  var token = $("#token").text();
+        //console.log(data);
+    //    var data = {
+    //        name: name,
+      //      telephone: telephone,
+      //      files: files,
+      //      '_token': token
+     //   }
+        $.ajax({
+            url: 'resume',
+            method: "POST",
+            data: data,
+            dataType : "json",
+            success: function(data){
+                console.info('Server response: ', data);
+                if(data.status == 'success'){
+                    swal ("Ваше резюме успішно відправлено!");
+                    jQuery("#resume-form-file").trigger("reset");
+
+
+                }else{
+                    swal("Будь ласка введіть всі дані!");
+                    $("#resume-form-file").attr('disabled', false);
+                }
+
+            },
+            error:function(data){
+                swal ("Сталася помилка при відправці резюме!");
+              //  jQuery("#resume-form-file").trigger("reset");
+            }
+        },"json");
+        event.preventDefault();
+
+    });
+    /*End script for comments*/
+});
+/* END Скрипт для отправки готового резюме*/
