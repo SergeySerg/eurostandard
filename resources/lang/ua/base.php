@@ -23,6 +23,8 @@ return [
 	'resume' => 'Вислати резюме',
 	'more' => 'Детальніше',
 	'latest_jobs' => 'Останні вакансії',
+	'latest_news' => 'Останні новини',
+	'read_full_news' => 'Читати повну новину',
 	/* End Header */
 	/* Gallery Page */
 	'gallerycontenttitle' => 'Галерея',

@@ -22,6 +22,8 @@ return [
 	'resume' => 'Wysyłać CV',
 	'more' => 'Więcej',
 	'latest_jobs' => 'Najnowsze oferty pracy',
+	'latest_news' => 'Ostatnie wiadomości',
+	'read_full_news' => 'Przeczytaj pełen nowości',
 	/* End Header */
 	/* Gallery Page */
 	'gallerycontenttitle' => 'Галерея',

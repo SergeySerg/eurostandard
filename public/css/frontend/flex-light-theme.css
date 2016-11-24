@@ -1,5 +1,5 @@
 body{
-    background-image: url("http://yeap.narod.ru/global/files/textures/01.jpg")
+    background-image: url("../../img/frontend/bg.jpg")
 }
 .panel-default>.panel-heading{
     background: none;
@@ -58,4 +58,10 @@ body{
     text-align: center;
     margin-right: 20px;
     margin-top: 20px;
+}
+.navbar-default .navbar-text {
+    font-size: 25px;
+}
+footer .navbar-text {
+    font-size: 16px;
 }

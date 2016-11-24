@@ -82,6 +82,12 @@ $(function(){
     );
     /* END появление меню при скроле */
 
+    $('.description-show').click(function(){
+        $(this).parent().find('.description').slideToggle(700);
+        $('.description-show i').toggleClass('fa-angle-down').toggleClass('fa-angle-up');
+        return false;
+    });
+
 });
 
 /* Скрипт формы обратной связи */

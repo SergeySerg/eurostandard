@@ -22,6 +22,8 @@ return [
 	'resume' => 'Send CV',
 	'more' => 'More',
 	'latest_jobs' => 'Latest jobs',
+	'latest_news' => 'Latest news',
+	'read_full_news' => 'Read full news',
 	/* End Header */
 	/* Gallery Page */
 	'gallerycontenttitle' => 'Галерея',

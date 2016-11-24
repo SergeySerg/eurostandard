@@ -180,6 +180,11 @@ a.main-resume:hover{
 .resume-block{
     margin-top: 10px;
 }
+#webstudio-slider{
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0, .15);
+}
 /*===================================================*/
 .navbar-fixed-top{
     opacity: .9;
