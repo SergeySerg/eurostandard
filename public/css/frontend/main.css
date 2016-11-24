@@ -185,6 +185,12 @@ a.main-resume:hover{
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0, .15);
 }
+.nav-tabs .open>a,
+.nav-tabs .open>a:focus,
+.nav-tabs .open>a:hover,
+.nav-tabs>li>a {
+    border-color: #fff;
+}
 /*===================================================*/
 .navbar-fixed-top{
     opacity: .9;

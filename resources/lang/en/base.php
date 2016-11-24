@@ -23,10 +23,12 @@ return [
 	'more' => 'More',
 	'latest_jobs' => 'Latest jobs',
 	'latest_news' => 'Latest news',
+	'all_news' => 'All news',
+	'all_jobs' => 'All jobs',
 	'read_full_news' => 'Read full news',
 	/* End Header */
 	/* Gallery Page */
-	'gallerycontenttitle' => 'Галерея',
+	'gallery_empty' => 'Gallery is empty', 
 	/* End Gallery Page */
 	/* Resume*/
 	'resume.makeresume' => 'Form and send resume',

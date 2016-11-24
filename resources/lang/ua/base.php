@@ -24,10 +24,12 @@ return [
 	'more' => 'Детальніше',
 	'latest_jobs' => 'Останні вакансії',
 	'latest_news' => 'Останні новини',
+	'all_news' => 'Всі новини',
+	'all_jobs' => 'Всі вакансії',
 	'read_full_news' => 'Читати повну новину',
 	/* End Header */
 	/* Gallery Page */
-	'gallerycontenttitle' => 'Галерея',
+	'gallery_empty' => 'Відсутні фото',
 	/* End Gallery Page */
 	/* Resume*/
 	'resume.makeresume' => 'Сформувати і відправити резюме',

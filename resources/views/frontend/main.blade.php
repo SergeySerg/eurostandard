@@ -38,7 +38,7 @@
 
             <div class="panel panel-default wow fadeInLeft">
 
-                <div class="panel-heading"> {{ $main->getTranslate('title') }}</div>
+                <div class="panel-heading">{{ $main->getTranslate('title') }}</div>
 
                 <div class="panel-body">
 
@@ -120,7 +120,7 @@
 
                     </div>
 
-                    <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/news" role="button">Всі новини</a></p>
+                    <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/news" role="button">{{ trans('base.all_news') }}</a></p>
 
                 </div>
 
@@ -133,7 +133,6 @@
             <div class="panel panel-default wow fadeInDown">
 
                 <div class="panel-heading">{{ trans('base.latest_jobs') }}</div>
-
 
                 <div class="panel-body">
 
@@ -163,7 +162,7 @@
 
                     </div>
 
-                    <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/works" role="button">Всі вакансії</a></p>
+                    <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/works" role="button">{{ trans('base.all_jobs') }}</a></p>
 
                 </div>
 

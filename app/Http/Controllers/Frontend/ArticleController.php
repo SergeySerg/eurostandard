@@ -46,12 +46,6 @@ class ArticleController extends Controller {
 			case 'work':
 				break;
 			case 'gallery':
-                $gallery = Category::where('link','=', 'gallery')
-                    ->first()
-                    ->articles()
-					->where('active','=', 1)
-					->get()
-					->sortByDesc("priority");
 				break;
 			case 'slider':
 				break;
@@ -61,9 +55,7 @@ class ArticleController extends Controller {
 
 
 		return view('frontend.'.$type, [
-			'gallery' => $gallery,
 			'slides' => $slides,
-
 		]);
 	}
 

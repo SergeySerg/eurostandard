@@ -36,8 +36,10 @@ class FrontendInit {
 			->first();
 		$company = Category::where('link','=', 'company')
 			->first()
-			->articles
-			->first();
+			->articles()
+			->where('active','=', '1')
+			->orderBy("priority", 'desc')
+			->get();
 		$last_news = Category::where('link','=', 'news')
 			->first()
 			->articles()
@@ -52,8 +54,14 @@ class FrontendInit {
 			->orderBy("priority", 'desc')
 			->take(2)
 			->get();
+		$gallery = Category::where('link','=', 'gallery')
+			->first()
+			->articles()
+			->where('active','=', 1)
+			->get()
+			->sortByDesc("priority");
 
-		//dd($last_works);
+		//dd($gallery);
 		$texts = new Text();
 
 		// Share to views global template variables
@@ -64,6 +72,7 @@ class FrontendInit {
 		view()->share('texts', $texts->init());
 		view()->share('version', config('app.version'));
 		view()->share('main', $main);
+		view()->share('gallery', $gallery);
 
 		return $next($request);
 	}

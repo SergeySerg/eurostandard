@@ -23,10 +23,12 @@ return [
 	'more' => 'Więcej',
 	'latest_jobs' => 'Najnowsze oferty pracy',
 	'latest_news' => 'Ostatnie wiadomości',
+	'all_news' => 'Wszystko wiadomości',
+	'all_jobs' => 'Wszystko oferty pracy',
 	'read_full_news' => 'Przeczytaj pełen nowości',
 	/* End Header */
 	/* Gallery Page */
-	'gallerycontenttitle' => 'Галерея',
+	'gallery_empty' => 'Brak zdjęcia',
 	/* End Gallery Page */
 	/* Resume*/
 	'resume.makeresume' => 'Tworzyć i wysyłać CV',

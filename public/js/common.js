@@ -1,5 +1,6 @@
 $(function(){
-    
+    $('.flex-tabs li:first-child').addClass('active');
+    $('.tab-content .tab-pane:first-child').addClass('active');
     /* слайдер на главной*/
     $("#webstudio-slider").unitegallery({
         gallery_theme: "slider",
