@@ -148,6 +148,17 @@
                             @endif
                         </div>
                     </div>
+
+                    <div class="profile-info-row">
+                        <div class="profile-info-name"> Готове резюме </div>
+
+                        <div class="profile-info-value">
+                            @if($admin_resume && $admin_resume->files)
+                                <span class="editable" id="salary">{{$admin_resume->files}}</span>
+                            @else <span style="color: lightgrey"> Не вказано </span>
+                            @endif
+                        </div>
+                    </div>
                 </div>
 
                 <div class="form-actions">

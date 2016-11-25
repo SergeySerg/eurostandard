@@ -159,19 +159,21 @@ document.addEventListener("DOMContentLoaded", function(){
 document.addEventListener("DOMContentLoaded", function(){
     /*Start script for comments*/
     $('#resume-send-file').on('click', function(event){
-        var files = $("input[name=files]").val();
-       var data = $('form#resume-form-file').serialize();
-     //   var name = $("input[name=name]").val();
-      //  var telephone = $("input[name=telephone]").val();
-
-     //  var token = $("#token").text();
+        var files = $("#resume-form-file input[name=files]").val();
+      // var data = $('form#resume-form-file').serialize();
+        var name = $("#resume-form-file input[name=name]").val();
+        var telephone = $("#resume-form-file input[name=telephone]").val();
+       // var files = $("input[name=files]").val();
+        var token = $("#resume-form-file input[name=_token]").val();
+      //var token = $("#token").text();
         //console.log(data);
-    //    var data = {
-    //        name: name,
-      //      telephone: telephone,
-      //      files: files,
-      //      '_token': token
-     //   }
+       var data = {
+           name: name,
+            telephone: telephone,
+            files: files,
+            _token: token
+        };
+
         $.ajax({
             url: 'resume',
             method: "POST",
@@ -196,6 +198,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         },"json");
         event.preventDefault();
+        return false;
 
     });
     /*End script for comments*/
