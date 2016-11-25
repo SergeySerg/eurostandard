@@ -33,6 +33,9 @@ return [
 	/* News Page */
 	'date' => 'Data',
 	/* End News Page */
+	/* Works Page */
+	'salary' => 'Płaca',
+	/* End Works Page */
 	/* Resume*/
 	'resume.makeresume' => 'Tworzyć i wysyłać CV',
 	'resume.sendresume' => 'Wyślij gotowe CV',

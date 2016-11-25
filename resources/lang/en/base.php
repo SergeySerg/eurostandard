@@ -33,6 +33,9 @@ return [
 	/* News Page */
 	'date' => 'Date', 
 	/* End News Page */
+	/* Works Page */
+	'salary' => 'Salary', 
+	/* End Works Page */
 	/* Resume*/
 	'resume.makeresume' => 'Form and send resume',
 	'resume.sendresume' => 'Send resume ready',

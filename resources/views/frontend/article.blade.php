@@ -2,8 +2,6 @@
 
 @section('content')
 
-    <!--start: Row -->
-
     <div class="row">
 
         <div class="col-md-8">
@@ -154,6 +152,5 @@
         </div>
 
     </div>
-    <!-- Example row of columns -->
 
 @endsection

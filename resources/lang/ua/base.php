@@ -34,6 +34,9 @@ return [
 	/* News Page */
 	'date' => 'Дата',
 	/* End News Page */
+	/* Works Page */
+	'salary' => 'Заробітна плата',
+	/* End Works Page */
 	/* Resume*/
 	'resume.makeresume' => 'Сформувати і відправити резюме',
 	'resume.sendresume' => 'Відправити готове резюме',
