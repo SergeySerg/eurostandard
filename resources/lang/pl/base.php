@@ -30,6 +30,9 @@ return [
 	/* Gallery Page */
 	'gallery_empty' => 'Brak zdjęcia',
 	/* End Gallery Page */
+	/* News Page */
+	'date' => 'Data',
+	/* End News Page */
 	/* Resume*/
 	'resume.makeresume' => 'Tworzyć i wysyłać CV',
 	'resume.sendresume' => 'Wyślij gotowe CV',

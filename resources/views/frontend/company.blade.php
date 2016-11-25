@@ -109,8 +109,8 @@
                 <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/works" role="button">{{ trans('base.all_jobs') }}</a></p>
 
             </div>
-        </div>
 
+        </div>
 
         <div class="panel panel-default wow fadeInUp">
 

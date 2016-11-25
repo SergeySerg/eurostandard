@@ -31,6 +31,9 @@ return [
 	/* Gallery Page */
 	'gallery_empty' => 'Відсутні фото',
 	/* End Gallery Page */
+	/* News Page */
+	'date' => 'Дата',
+	/* End News Page */
 	/* Resume*/
 	'resume.makeresume' => 'Сформувати і відправити резюме',
 	'resume.sendresume' => 'Відправити готове резюме',

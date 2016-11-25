@@ -191,6 +191,9 @@ a.main-resume:hover{
 .nav-tabs>li>a {
     border-color: #fff;
 }
+.panel-heading .fa{
+    margin-right: 10px;
+}
 /*===================================================*/
 .navbar-fixed-top{
     opacity: .9;

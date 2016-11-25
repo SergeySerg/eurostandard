@@ -30,6 +30,9 @@ return [
 	/* Gallery Page */
 	'gallery_empty' => 'Gallery is empty', 
 	/* End Gallery Page */
+	/* News Page */
+	'date' => 'Date', 
+	/* End News Page */
 	/* Resume*/
 	'resume.makeresume' => 'Form and send resume',
 	'resume.sendresume' => 'Send resume ready',

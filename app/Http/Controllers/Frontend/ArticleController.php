@@ -85,9 +85,14 @@ class ArticleController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($lang,$type, $id)
 	{
-		//
+		$article = Article::find($id);
+		view()->share('meta', $article);
+		return view('frontend.article', [
+			'article' => $article,
+		]);
+
 	}
 
 	/**
