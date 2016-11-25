@@ -52,6 +52,11 @@ return [
 	'resume.salary' => 'Preferred salary',
 	'resume.file' => 'Attach file summary',
 	/* End Resume*/
+	/* Contact*/
+	'ukraine_office' => 'Office in Ukraine',
+	'poland_office_1' => 'Office in Poland №1',
+	'poland_office_2' => 'Office in Poland №2',
+	/* End Contact */
 	/* Footer*/
 	'send' => 'Send',
 	/* End Footer */

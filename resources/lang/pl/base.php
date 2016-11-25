@@ -52,6 +52,11 @@ return [
 	'resume.salary' => 'Korzystne zarobki',
 	'resume.file' => 'Dołączanie pliku podsumowanie',
 	/* End Resume*/
+	/* Contact*/
+	'ukraine_office' => 'Biuro na Ukrainie',
+	'poland_office_1' => 'Biuro w Polsce №1',
+	'poland_office_2' => 'Biuro w Polsce №2',
+	/* End Contact */
 	/* Footer*/
 	'send' => 'Wysłać',
 	/* End Footer */
