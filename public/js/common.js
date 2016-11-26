@@ -156,8 +156,8 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 /* END Скрипт для отправки резюме с сайта */
 /* Скрипт для отправки готового резюме */
-document.addEventListener("DOMContentLoaded", function(){
-    /*Start script for comments*/
+/*document.addEventListener("DOMContentLoaded", function(){
+
     $('#resume-send-file').on('click', function(event){
         var files = $("#resume-form-file input[name=files]").val();
       // var data = $('form#resume-form-file').serialize();
@@ -201,6 +201,6 @@ document.addEventListener("DOMContentLoaded", function(){
         return false;
 
     });
-    /*End script for comments*/
-});
+
+});*/
 /* END Скрипт для отправки готового резюме*/

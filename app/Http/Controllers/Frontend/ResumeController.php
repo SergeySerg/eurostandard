@@ -60,36 +60,15 @@ class ResumeController extends Controller {
 		$all = $request->all();
 		if (isset($all['date_birthday']))
 			$all['date_birthday'] = date('Y-m-d H:i:s',strtotime($all['date_birthday']));
-			//$date=date('d.m.Y');
-			//$content = $request->file('files')->getClientOriginalName();
-			//$file = Storage::makeDirectory('upload/files/'.$date, '0777', true, true);
-			//Storage::put($file, $content);
-		// getting all of the post data
-
-			// checking file is valid.
-
-dd($file = $request->hasFile('files'));
-				$destinationPath = 'upload/files'; // upload path
-
-				$extension = Input::file('files')->getClientOriginalExtension();
-				//dd($extension);// getting image extension
-				$fileName = rand(11111, 99999) . '.' . $extension; // renameing image
-				Input::file('files')->move($destinationPath, $fileName); // uploading file to given path
-				// sending back with message
-
-
 			Resume::create($all);
-
-
 		//Отправка уведомления про добавления нового отзыва на email
-		//Mail::send('emails.comment', $all, function($message){
-		//	$message->to('webtestingstudio@gmail.com', 'Eurostandard')->subject('Повідомлення про про нове резюме з сайту "Eurostandard" ');
-		//});
+		Mail::send('emails.resume', $all, function($message){
+		$message->to('webtestingstudio@gmail.com', 'Eurostandard')->subject('Повідомлення про про нове резюме з сайту "Eurostandard" ');
+		});
 		return response()->json([
 			"status" => 'success'
 		]);
 	}
-
 	/**
 	 * Display the specified resource.
 	 *

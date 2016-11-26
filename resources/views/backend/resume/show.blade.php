@@ -154,7 +154,7 @@
 
                         <div class="profile-info-value">
                             @if($admin_resume && $admin_resume->files)
-                                <span class="editable" id="salary">{{$admin_resume->files}}</span>
+                                <span class="editable" id="salary"><a href="{{ asset('/'.$admin_resume->files) }}">Скачати резюме</a></span>
                             @else <span style="color: lightgrey"> Не вказано </span>
                             @endif
                         </div>

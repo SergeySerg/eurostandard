@@ -24,6 +24,31 @@ use Image;
 
 class UploadController extends Controller {
 
+	public function upload(Request $request){
+		$input = Input::all();
+		$all = $request->all();
+		$files = $request->file('files');
+		if(!empty($files)):
+			$date=date('d.m.Y');
+			//$road = Storage::makeDirectory('upload/files/' . $date, '0777', true, true);
+			foreach($files as $file):
+				$extension = $file->getClientOriginalExtension();
+				$namefile = 'resume.'.$extension;
+				Storage::put('upload/files/'.$date.'/'.$namefile, file_get_contents($file));
+			//	Storage::move('upload/files/'.$date.'/'.$file->getClientOriginalName(), 'upload/files/'.$date.'/'.);
+			endforeach;
+
+		endif;
+		$all['files'] = 'upload/files/'.$date.'/'.$namefile;
+		Resume::create($all);
+
+		//Отправка уведомления про добавления нового отзыва на email
+		Mail::send('emails.upload-resume', $all, function($message) use ($all){
+			$message->to('webtestingstudio@gmail.com', 'Eurostandard')->subject('Повідомлення про про нове резюме з сайту "Eurostandard" ');
+			$message->attach($all['files']);
+		});
+		return \Response::json(array('success' => true));
+	}
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -97,19 +122,5 @@ class UploadController extends Controller {
 	{
 		//
 	}
-	public function upload(Request $request){
 
-		$files = $request->file('files');
-
-		if(!empty($files)):
-			$date=date('d.m.Y');
-			//$road = Storage::makeDirectory('upload/files/' . $date, '0777', true, true);
-			foreach($files as $file):
-				Storage::put('upload/files/'.$date.'/'.$file->getClientOriginalName(), file_get_contents($file));
-			endforeach;
-
-		endif;
-
-		return \Response::json(array('success' => true));
-	}
 }

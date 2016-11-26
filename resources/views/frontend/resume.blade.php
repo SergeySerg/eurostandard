@@ -110,7 +110,16 @@
                             </form>
 
                             <form action="upload" id="upload" enctype="multipart/form-data">
-                                <input type="file" name="files[]" multiple><br />
+                                <div class="clearfix">
+                                    <label for="name"><h4>{{ trans('base.resume.name') }}</h4></label>
+                                    <input id="name" type="text" name="name" required="required" class="form-control" aria-describedby="sizing-addon2">
+                                </div>
+
+                                <div class="clearfix">
+                                    <label for="mobile"><h4>{{ trans('base.resume.mobile') }}</h4></label>
+                                    <input id="mobile" accept="doc" type="number" required="required" name="telephone" class="form-control" aria-describedby="sizing-addon2">
+                                </div>
+                                <input type="file" name="files[]"><br />
                                 <input type="hidden" name="_token" value="{{ csrf_token()}}">
                                 <input type="submit">
 
