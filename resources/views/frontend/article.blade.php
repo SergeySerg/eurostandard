@@ -7,11 +7,13 @@
         <div class="panel panel-default wow fadeInUp">
 
             <div class="panel-heading">{{ $article->getTranslate('title') }}
-                @if(Request::is('*/news/'))
+
+                @if(Request::is('*/news/*'))
                     <div class="pull-right"><i class="fa fa-calendar" aria-hidden="true"></i>{{ date('d/m/Y ',strtotime($article -> date)) }}</div>
                 @else
                     <div class="pull-right"><i class="fa fa-money" aria-hidden="true"></i>{{ $article -> price }}</div>
                 @endif
+
             </div>
 
             <div class="panel-body">
