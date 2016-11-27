@@ -25,7 +25,7 @@
 @section('content')
 
     <div class="page-content">
-        <div class="page-header position-relative">
+        <div class="page-header position-relative hidden-print">
             <h1>
                 Детальний перегляд резюме
             </h1>
@@ -154,17 +154,21 @@
 
                         <div class="profile-info-value">
                             @if($admin_resume && $admin_resume->files)
-                                <span class="editable" id="salary"><a href="{{ asset('/'.$admin_resume->files) }}">Скачати резюме</a></span>
+                                <span class="editable" id="salary"><a href="{{ asset('/'.$admin_resume->files) }}">Завантажити резюме <i class="icon-download"></i></a></span>
                             @else <span style="color: lightgrey"> Не вказано </span>
                             @endif
                         </div>
                     </div>
                 </div>
 
-                <div class="form-actions">
+                <div class="form-actions hidden-print">
                     <a href='{{ $url }}/resume'>
                         <div class="btn btn-info">Повернутися до списку всіх резюме</div>
                     </a>
+                    <button style="float: right" class="btn btn-app btn-light btn-mini" onclick="window.print();">
+                        <i class="icon-print bigger-160"></i>
+                        Print
+                    </button>
                 </div>
                 <div class="space-4"></div>
 

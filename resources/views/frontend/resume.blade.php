@@ -84,7 +84,7 @@
 
                         <div id="tab2" class="tab-pane fade">
 
-                            <form method="post" id="resume-form-file"  class="r-form" action="">
+                           <!--<form method="post" id="resume-form-file"  class="r-form" action="">
 
                                 <div class="clearfix">
                                     <label for="name"><h4>{{ trans('base.resume.name') }}</h4></label>
@@ -107,9 +107,9 @@
 
                                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
 
-                            </form>
+                            </form>-->
 
-                            <form action="upload" id="upload" enctype="multipart/form-data">
+                            <form action="upload" id="upload" class="r-form" enctype="multipart/form-data">
                                 <div class="clearfix">
                                     <label for="name"><h4>{{ trans('base.resume.name') }}</h4></label>
                                     <input id="name" type="text" name="name" required="required" class="form-control" aria-describedby="sizing-addon2">
@@ -119,9 +119,9 @@
                                     <label for="mobile"><h4>{{ trans('base.resume.mobile') }}</h4></label>
                                     <input id="mobile" accept="doc" type="number" required="required" name="telephone" class="form-control" aria-describedby="sizing-addon2">
                                 </div>
-                                <input type="file" name="files[]"><br />
+                                <input type="file" required="required" name="files[]"><br />
                                 <input type="hidden" name="_token" value="{{ csrf_token()}}">
-                                <input type="submit">
+                                <input type="submit" value="{{ trans('base.send') }}" class="btn btn-primary btn-lg" role="button">
 
                             </form>
                             <div id="message"></div>
@@ -143,7 +143,8 @@
                                 function transferComplete(data){
                                     response = JSON.parse(data.currentTarget.response);
                                     if(response.success){
-                                        document.getElementById('message').innerHTML = "Резюме успішно відправлено!";
+                                        swal ("Ваше резюме успішно відправлено!");
+                                        jQuery("#upload").trigger("reset");
                                     }
                                 }
                             </script>
