@@ -258,7 +258,7 @@
 
 				<div class="col-sm-3 col-md-3 wow fadeInUp">
 
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="/{{ App::getLocale() }}">
 						<img alt="Brand" src="/img/frontend/logo.jpg">
 					</a>
 

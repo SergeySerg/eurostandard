@@ -24,7 +24,7 @@
 
                         @if(count($article->getImages()) > 0)
 
-                            <div class="col-md-3">
+                            <div class="col-md-12">
 
                                 <a href="#" class="thumbnail">
                                     <img src="/{{$article->getImages()[0]['min']}}" alt="...">
@@ -32,13 +32,9 @@
 
                             </div>
 
-                            <div class="col-md-9">
-
-                        @else
-
-                            <div class="col-md-12">
-
                         @endif
+
+                        <div class="col-md-12">
 
                             {!! $article->getTranslate('description') !!}
 
