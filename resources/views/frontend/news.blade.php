@@ -20,19 +20,23 @@
 
                             <div class="r-block-item">
 
-                                <div class="col-md-3">
+                                @if(count($new->getImages()) > 0)
 
-                                    @if(count($new->getImages()) > 0)
+                                    <div class="col-md-3">
 
                                         <a href="#" class="thumbnail">
                                             <img src="/{{$new->getImages()[0]['min']}}" alt="...">
                                         </a>
 
-                                    @endif
+                                    </div>
 
-                                </div>
+                                    <div class="col-md-9">
 
-                                <div class="col-md-9">
+                                @else
+
+                                    <div class="col-md-12">
+
+                                @endif
 
                                     <h4>{{ $new->getTranslate('title') }}</h4>
 
