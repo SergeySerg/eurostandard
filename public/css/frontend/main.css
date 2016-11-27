@@ -136,29 +136,29 @@ footer .navbar-text{
 #resume-form input,
 #resume-form textarea,
 #resume-form label,
-#resume-form-file input,
-#resume-form-file textarea,
-#resume-form-file label{
+#upload input,
+#upload textarea,
+#upload label{
     width: 48%;
     display: inline-block;
     margin-bottom: 15px;
 }
 #resume-form p,
-#resume-form-file p{
+#upload p{
     text-align: center;
 }
 #resume-form label,
-#resume-form-file label{
+#upload label{
     float: left;
 }
 #resume-form input,
 #resume-form textarea,
-#resume-form-file input,
-#resume-form-file textarea{
+#upload input,
+#upload textarea{
     float: right;
 }
 #resume-form input[type=submit],
-#resume-form-file input[type=submit]{
+#upload input[type=submit]{
     float: none;
     width: 100%;
     font-size: 20px;

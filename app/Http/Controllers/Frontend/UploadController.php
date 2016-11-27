@@ -22,8 +22,33 @@ use Illuminate\Support\Facades\Response;
 use Storage;
 use Image;
 
-class ResumeController extends Controller {
+class UploadController extends Controller {
 
+	public function upload(Request $request){
+		$input = Input::all();
+		$all = $request->all();
+		$files = $request->file('files');
+		if(!empty($files)):
+			$date=date('d.m.Y');
+			//$road = Storage::makeDirectory('upload/files/' . $date, '0777', true, true);
+			foreach($files as $file):
+				$extension = $file->getClientOriginalExtension();
+				$namefile = 'resume.'.$extension;
+				Storage::put('upload/files/'.$date.'/'.$namefile, file_get_contents($file));
+			//	Storage::move('upload/files/'.$date.'/'.$file->getClientOriginalName(), 'upload/files/'.$date.'/'.);
+			endforeach;
+
+		endif;
+		$all['files'] = 'upload/files/'.$date.'/'.$namefile;
+		Resume::create($all);
+
+		//Отправка уведомления про добавления нового отзыва на email
+		Mail::send('emails.upload-resume', $all, function($message) use ($all){
+			$message->to('webtestingstudio@gmail.com', 'Eurostandard')->subject('Повідомлення про про нове резюме з сайту "Eurostandard" ');
+			$message->attach($all['files']);
+		});
+		return \Response::json(array('success' => true));
+	}
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -31,9 +56,7 @@ class ResumeController extends Controller {
 	 */
 	public function index()
 	{
-		$meta = view()->share('meta', Article::where('name', '=', 'meta.company')->first());
-
-		return view('frontend.resume');
+		//
 	}
 
 	/**
@@ -51,24 +74,11 @@ class ResumeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function store()
 	{
-		$this->validate($request, [
-			'name' => 'required|max:255',
-			'telephone' => 'required',
-		]);
-		$all = $request->all();
-		if (isset($all['date_birthday']))
-			$all['date_birthday'] = date('Y-m-d H:i:s',strtotime($all['date_birthday']));
-			Resume::create($all);
-		//Отправка уведомления про добавления нового отзыва на email
-		Mail::send('emails.resume', $all, function($message){
-		$message->to('webtestingstudio@gmail.com', 'Eurostandard')->subject('Повідомлення про про нове резюме з сайту "Eurostandard" ');
-		});
-		return response()->json([
-			"status" => 'success'
-		]);
+		//
 	}
+
 	/**
 	 * Display the specified resource.
 	 *
@@ -77,7 +87,7 @@ class ResumeController extends Controller {
 	 */
 	public function show($id)
 	{
-
+		//
 	}
 
 	/**

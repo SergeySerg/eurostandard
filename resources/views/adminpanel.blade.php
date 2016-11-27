@@ -74,7 +74,7 @@
         </ul>
     </div>-->
 
-<div class="navbar">
+<div class="navbar hidden-print">
     <div class="navbar-inner">
         <div class="container-fluid">
             <a href="#" class="brand">
@@ -134,7 +134,7 @@
         <span class="menu-text"></span>
     </a>
 
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar hidden-print" id="sidebar">
         <div class="sidebar-shortcuts" id="sidebar-shortcuts">
             <div class="sidebar-shortcuts-large">
                 Меню адмін панелі
@@ -224,7 +224,7 @@
     </div>
 
     <div class="main-content">
-        <div class="breadcrumbs" id="breadcrumbs">
+        <div class="breadcrumbs hidden-print" id="breadcrumbs">
             <ul class="breadcrumb">
                 @yield('breadcrumbs')
             </ul><!--.breadcrumb-->

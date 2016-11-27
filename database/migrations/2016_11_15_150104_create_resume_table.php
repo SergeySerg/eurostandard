@@ -26,6 +26,7 @@ class CreateResumeTable extends Migration {
 			$table->text('home_telephone');
 			$table->text('home_telephone');
 			$table->text('possession');
+			$table->text('files');
 			$table->timestamp('created_at');
 			$table->timestamp('updated_at');
 
