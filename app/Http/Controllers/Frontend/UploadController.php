@@ -25,6 +25,25 @@ use Image;
 class UploadController extends Controller {
 
 	public function upload(Request $request){
+
+			$data = array(
+				'name' => Input::get('name'),
+				'telephone' => Input::get('email'),
+				'files' => Input::get('files')
+			);
+			$rules = array(
+				'name'  => 'required|max:50',
+				'telephone' => 'required|',
+				'files' => 'required||mimes:doc,docx,xls,xlsx,pdf,rtf.txt|max:500000',
+			);
+			$validation = Validator::make($data, $rules);
+
+			if ($validation->fails()) {
+				//return Redirect::to('/')->withErrors($validation)->withInput();
+				return response()->json([
+					"status" => 'error'
+				]);
+			}
 		$input = Input::all();
 		$all = $request->all();
 		$files = $request->file('files');

@@ -57,7 +57,8 @@ $(function(){
     /* появление меню при скроле */
     $(window).on('scroll', function(){
         var scrollPosition = $(this).scrollTop();
-        if(scrollPosition > 100){
+        //console.info(scrollPosition);
+        if(scrollPosition > 180){
             if(!$('.navbar').hasClass('navbar-fixed-top')){
                 $('.navbar').addClass('navbar-fixed-top');
                 $('.navbar').hide(0);
@@ -88,6 +89,32 @@ $(function(){
         $('.description-show i').toggleClass('fa-angle-down').toggleClass('fa-angle-up');
         return false;
     });
+
+
+    /*$('#upload').on('submit', function(event){
+        //var formdata = $(this).serialize();
+        var formdata = new FormData(this);
+
+        alert('qwert');
+        $.ajax({
+            url: 'upload',
+            method: 'POST',
+            processData: false,
+            data: formdata,
+            success: function(response){
+                if(response.status == "success"){
+                    swal ("Ваше резюме успішно відправлено!");
+                    jQuery("#upload").trigger("reset");
+                }
+                if(response.status == "error"){
+                    alert(1);
+                    // jQuery("#upload").trigger("reset");
+                }
+            }
+        });
+        event.preventDefault();
+        return false;
+    });*/
 
 });
 

@@ -117,7 +117,10 @@
                                     <label for="mobile"><h4>{{ trans('base.resume.mobile') }}</h4></label>
                                     <input id="mobile" accept="doc" type="number" required="required" name="telephone" class="form-control" aria-describedby="sizing-addon2">
                                 </div>
-                                <input type="file" required="required" name="files[]"><br />
+                                <div class="clearfix">
+                                    <label for="mobile"><h4>{{ trans('base.resume.file') }}</h4></label>
+                                    <input type="file" required="required" name="files[]"><br />
+                                </div>
                                 <input type="hidden" name="_token" value="{{ csrf_token()}}">
                                 <input type="submit" value="{{ trans('base.send') }}" class="btn btn-primary btn-lg" role="button">
 
@@ -144,7 +147,12 @@
                                         swal ("Ваше резюме успішно відправлено!");
                                         jQuery("#upload").trigger("reset");
                                     }
+                                    if(response.status == "error"){
+                                        swal ("Помилка при відправці повідомдення!");
+                                       // jQuery("#upload").trigger("reset");
+                                      }
                                 }
+
                             </script>
                         </div>
 
