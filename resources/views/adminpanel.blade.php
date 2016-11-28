@@ -224,6 +224,7 @@
     </div>
 
     <div class="main-content">
+
         <div class="breadcrumbs hidden-print" id="breadcrumbs">
             <ul class="breadcrumb">
                 @yield('breadcrumbs')
@@ -236,7 +237,7 @@
         <!--PAGE CONTENT ENDS-->
 
 
-        <div class="ace-settings-container" id="ace-settings-container">
+        <div class="ace-settings-container hidden-print" id="ace-settings-container">
             <div class="btn btn-app btn-mini btn-warning ace-settings-btn" id="ace-settings-btn">
                 <i class="icon-cog bigger-150"></i>
             </div>
@@ -276,9 +277,10 @@
             </div>
         </div><!--/#ace-settings-container-->
     </div><!--/.main-content-->
-</div><!--/.main-container-->
 
-<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-small btn-inverse">
+    </div><!--/.main-container-->
+
+<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-small btn-inverse hidden-print">
     <i class="icon-double-angle-up icon-only bigger-110"></i>
 </a>
 

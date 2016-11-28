@@ -149,7 +149,7 @@
                         </div>
                     </div>
 
-                    <div class="profile-info-row">
+                    <div class="profile-info-row hidden-print">
                         <div class="profile-info-name"> Готове резюме </div>
 
                         <div class="profile-info-value">

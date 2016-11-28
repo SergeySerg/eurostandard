@@ -33,7 +33,7 @@ class UploadController extends Controller {
 			//$road = Storage::makeDirectory('upload/files/' . $date, '0777', true, true);
 			foreach($files as $file):
 				$extension = $file->getClientOriginalExtension();
-				$namefile = 'resume.'.$extension;
+				$namefile = 'resume_'.time().'.'.$extension;
 				Storage::put('upload/files/'.$date.'/'.$namefile, file_get_contents($file));
 			//	Storage::move('upload/files/'.$date.'/'.$file->getClientOriginalName(), 'upload/files/'.$date.'/'.);
 			endforeach;
