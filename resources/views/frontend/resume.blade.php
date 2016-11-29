@@ -125,7 +125,6 @@
                                 <input type="submit" value="{{ trans('base.send') }}" class="btn btn-primary btn-lg" role="button">
 
                             </form>
-                            <div id="message"></div>
 
                             <script>
                                 var form = document.getElementById('upload');
@@ -147,10 +146,7 @@
                                         swal ("Ваше резюме успішно відправлено!");
                                         jQuery("#upload").trigger("reset");
                                     }
-                                    if(response.status == "error"){
-                                        swal ("Помилка при відправці повідомдення!");
-                                       // jQuery("#upload").trigger("reset");
-                                      }
+
                                 }
 
                             </script>
