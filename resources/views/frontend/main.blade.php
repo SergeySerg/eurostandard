@@ -134,7 +134,7 @@
 
                                 <h4 class="col-sm-6 col-md-6 text-right r-price">{!! $last_work->getTranslate('price') !!}</h4>
 
-                                <p>{!! str_limit($last_work->getTranslate('short_description'), 215) !!}</p>
+                                <p>{!! str_limit($last_work->getTranslate('short_description'), 200) !!}</p>
 
                                 <a href="/{{ App::getLocale() }}/works/article-{{ $last_work -> id }}" class="pull-right">{{ trans('base.more') }}<i class="fa fa-angle-right fa-lg"></i></a>
 

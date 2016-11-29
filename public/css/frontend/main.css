@@ -61,9 +61,6 @@ ul{
 .panel-body a .fa{
     margin-left: 5px;
 }
-.r-block-item{
-    min-height: 131px;
-}
 .r-block-item hr{
     width: 94%;
     height: 1px;
@@ -78,10 +75,12 @@ footer {
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 10px;
+    border-top: 1px solid #75CAEB;
     background-color: #fff;
-    -moz-box-shadow: 0px 10px 15px -5px rgba(0,0,0,.2) inset;
-    -webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,.2) inset;
-    box-shadow: 0px 10px 15px -5px rgba(0,0,0,.2) inset;}
+    font-size: 14px;
+    -moz-box-shadow: 0px 10px 15px 7px rgba(0,0,0,.2);;
+    -webkit-box-shadow: 0px 10px 15px 7px rgba(0,0,0,.2);;
+    box-shadow: 0px 10px 15px 7px rgba(0,0,0,.2);}
 footer .navbar-brand{
     padding: 0;
     margin-right: 10px;
@@ -93,12 +92,13 @@ footer .navbar-brand>img{
 footer p{
     display: inline-block;
     line-height: 20px;
-    font-size: 18px;
+    font-size: 16px;
 }
 footer .fa{
     margin-right: 15px;
 }
 footer .navbar-text{
+    display: block;
     margin: 0;
     font-size: 18px;
     color: #00B2CC;
@@ -107,7 +107,6 @@ footer .navbar-text{
 .phone{
     font-size: 18px;
     display: inline-block;
-    font-size: 20px;
     line-height: 20px;
     margin: 0;
     padding: 0;
@@ -115,10 +114,13 @@ footer .navbar-text{
 .address{
     width: 250px;
 }
-.navbar-default .navbar-text{
+.navbar-default .navbar-text a{
     font-size: 26px;
     color: #00B2CC;
     line-height: 70px;
+}
+.navbar-default .navbar-text a:hover{
+    text-decoration: none;
 }
 .navbar-brand>img{
     width: 80px;
@@ -194,8 +196,25 @@ a.main-resume:hover{
 .nav-tabs>li>a {
     border-color: #fff;
 }
+.nav-tabs{
+    border-bottom: none;
+}
+.nav-tabs>li{
+    margin-bottom: 0;
+    margin-right: 2px;
+    font-style: italic;
+}
+.nav-tabs>li>a{
+    background-color: rgba(255, 255, 255, 0.70);
+    margin-right: 0;
+}
 .panel-heading .fa{
     margin-right: 10px;
+}
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover{
+    border: none;
 }
 /*===================================================*/
 .navbar-fixed-top{
@@ -219,12 +238,12 @@ a.main-resume:hover{
 .navbar-fixed-top .navbar-brand>img{
     width: 45px;
 }
-.navbar-fixed-top .navbar-text {
+.navbar-fixed-top .navbar-text a{
+    display: inline-block;
     font-size: 20px;
     color: #00B2CC;
     line-height: 40px;
-    padding-top: 10px;
-    margin-top: 0;
+    margin-top: -3px;
     margin-bottom: 0;
 }
 .navbar-fixed-top .r-menu{
@@ -237,4 +256,47 @@ a.main-resume:hover{
     line-height: 16px;
     padding-top: 10px;
     padding-bottom: 5px;
+}
+.fix-height{
+    min-height: 124px;
+}
+@media (max-width: 1200px) {
+    .navbar-text{
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .nav>li>a {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+}
+@media (max-width: 768px) {
+    footer{
+        padding-top: 10px;
+    }
+    footer .navbar-brand{
+        display: none;
+    }
+    footer .navbar-text a{
+        padding-left: 60px;
+    }
+    .navbar-brand>img {
+        width: 40px;
+        margin-top: -8px;
+    }
+    .fix-height{
+        min-height: 50px;
+    }
+    .min-center{
+        text-align: center;
+    }
+}
+@media (max-width: 410px) {
+    footer .fa-3x{
+        display: none;
+    }
+    footer .navbar-text a{
+        padding-left: 0;
+    }
 }

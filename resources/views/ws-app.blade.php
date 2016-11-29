@@ -38,13 +38,13 @@
 
 		<div class="row">
 
-			<div class="col-md-6 resume-block">
+			<div class="col-xs-6 resume-block">
 
 				<a class="main-resume" href="/{{ App::getLocale() }}/resume">{{ trans('base.resume') }}</a>
 
 			</div>
 
-			<ul class="col-md-6 text-right lang">
+			<ul class="col-xs-6 text-right lang">
 
 				@foreach($langs as $lang)
 
@@ -58,7 +58,7 @@
 
 		<div class="row">
 
-			<div class="col-md-12">
+			<div class="col-md-12 fix-height">
 
 				<nav class="navbar navbar-default">
 
@@ -78,7 +78,7 @@
 								<img alt="Brand" src="/img/frontend/logo.jpg">
 							</a>
 
-							<p class="navbar-text">EUROSTANDARD sp. z o.o.</p>
+							<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD sp. z o.o.</a></p>
 
 						</div>
 
@@ -256,17 +256,17 @@
 
 			<div class="row">
 
-				<div class="col-sm-3 col-md-3 wow fadeInUp">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 wow fadeInUp min-center">
 
 					<a class="navbar-brand" href="/{{ App::getLocale() }}">
 						<img alt="Brand" src="/img/frontend/logo.jpg">
 					</a>
 
-					<p class="navbar-text">EUROSTANDARD sp. z o.o.</p>
+					<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD sp. z o.o.</a></p>
 
 				</div>
 
-				<div class="col-sm-6 col-md-6 text-center wow fadeInDown">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-6 text-center wow fadeInDown min-center">
 
 					<i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
 					<p>	{{  $texts->get('header.address') }}<br>
@@ -275,7 +275,7 @@
 
 				</div>
 
-				<div class="col-sm-3 col-md-3 text-right wow fadeInLeft">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right wow fadeInLeft min-center">
 
 					<i class="fa fa-phone fa-3x" aria-hidden="true"></i>
 
