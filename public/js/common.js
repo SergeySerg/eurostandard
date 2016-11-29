@@ -57,7 +57,8 @@ $(function(){
     /* появление меню при скроле */
     $(window).on('scroll', function(){
         var scrollPosition = $(this).scrollTop();
-        if(scrollPosition > 100){
+        //console.info(scrollPosition);
+        if(scrollPosition > 180){
             if(!$('.navbar').hasClass('navbar-fixed-top')){
                 $('.navbar').addClass('navbar-fixed-top');
                 $('.navbar').hide(0);
@@ -89,125 +90,102 @@ $(function(){
         return false;
     });
 
+
+    /*$('#upload').on('submit', function(event){
+        //var formdata = $(this).serialize();
+        var formdata = new FormData(this);
+
+        alert('qwert');
+        $.ajax({
+            url: 'upload',
+            method: 'POST',
+            processData: false,
+            data: formdata,
+            success: function(response){
+                if(response.status == "success"){
+                    swal ("Ваше резюме успішно відправлено!");
+                    jQuery("#upload").trigger("reset");
+                }
+                if(response.status == "error"){
+                    alert(1);
+                    // jQuery("#upload").trigger("reset");
+                }
+            }
+        });
+        event.preventDefault();
+        return false;
+    });*/
+
 });
 
 /* Скрипт формы обратной связи */
-document.addEventListener("DOMContentLoaded", function(){
-    $("#contactform").submit(function(e){
-        e.preventDefault();
-        var name = $("input[name=name]").val();
-        var email = $("input[name=email]").val();
-        var message = $("textarea[name=message]").val();
-        var token = $("#token").text();
-        //var dataString = 'name='+name+'&email='+email+'&message'+message+'&_token='+token;
-        var data = {
-            name: name,
-            email: email,
-            message: message,
-            '_token': token
-        }
-        $.ajax({
-            method: "POST",
-            url : "/contact",
-            data : data,
-            dataType : "json",
+    document.addEventListener("DOMContentLoaded", function(){
+        $("#contactform").submit(function(e){
+            e.preventDefault();
+            var name = $("input[name=name]").val();
+            var email = $("input[name=email]").val();
+            var message = $("textarea[name=message]").val();
+            var token = $("#token").text();
+            //var dataString = 'name='+name+'&email='+email+'&message'+message+'&_token='+token;
+            var data = {
+                name: name,
+                email: email,
+                message: message,
+                '_token': token
+            }
+            $.ajax({
+                method: "POST",
+                url : "/contact",
+                data : data,
+                dataType : "json",
 
-            success: function(data){
-                console.info('Server response: ', data);
-                if(data.status == 'success'){
-                    swal("Ваше повідомлення успішно відправлено!"," ","success");
+                success: function(data){
+                    console.info('Server response: ', data);
+                    if(data.status == 'success'){
+                        swal("Ваше повідомлення успішно відправлено!"," ","success");
+                        jQuery("#contactform").trigger("reset");
+                    }
+                },
+                error:function(data){
+                    swal ("Сталася помилка при відправці повідомлення!");
                     jQuery("#contactform").trigger("reset");
                 }
-            },
-            error:function(data){
-                swal ("Сталася помилка при відправці повідомлення!");
-                jQuery("#contactform").trigger("reset");
-            }
-        },"json");
+            },"json");
 
+        });
+        /* END Скрипт формы обратной связи */
     });
-    /* END Скрипт формы обратной связи */
-});
 /* Скрипт для отправки резюме с сайта */
-document.addEventListener("DOMContentLoaded", function(){
-    /*Start script for comments*/
-    $('#resume-send').on('click', function(event){
-        var data = $('form#resume-form').serialize();
-        $.ajax({
-            url: 'resume',
-            method: "POST",
-            data: data,
-            dataType : "json",
-            success: function(data){
-                console.info('Server response: ', data);
-                if(data.status == 'success'){
-                    swal ("Ваше резюме успішно відправлено!");
-                    jQuery("#resume-form").trigger("reset");
+    document.addEventListener("DOMContentLoaded", function(){
+        /*Start script for comments*/
+        $('#resume-send').on('click', function(event){
+            var data = $('form#resume-form').serialize();
+            $.ajax({
+                url: 'resume',
+                method: "POST",
+                data: data,
+                dataType : "json",
+                success: function(data){
+                    console.info('Server response: ', data);
+                    if(data.success){
+                        swal(trans['base.success'], "", "success");
+                        jQuery("#resume-form").trigger("reset");
+                    }
+                    else{
+                        swal(trans['base.error'], data.message, "error");
+                        $("#resume-send").attr('disabled', false);
+                    }
 
-
-                }else{
-                    swal("Будь ласка введіть всі дані!");
-                    $("#resume-send").attr('disabled', false);
+                },
+                error:function(data){
+                    swal(trans['base.error']);
+                    //  jQuery("#resume-form").trigger("reset");
                 }
 
-            },
-            error:function(data){
-                swal ("Сталася помилка при відправці резюме!");
-              //  jQuery("#resume-form").trigger("reset");
-            }
-        },"json");
-        event.preventDefault();
+            },"json");
+            event.preventDefault();
 
+        });
+        /*End script for comments*/
     });
-    /*End script for comments*/
-});
 /* END Скрипт для отправки резюме с сайта */
-/* Скрипт для отправки готового резюме */
-/*document.addEventListener("DOMContentLoaded", function(){
-
-    $('#resume-send-file').on('click', function(event){
-        var files = $("#resume-form-file input[name=files]").val();
-      // var data = $('form#resume-form-file').serialize();
-        var name = $("#resume-form-file input[name=name]").val();
-        var telephone = $("#resume-form-file input[name=telephone]").val();
-       // var files = $("input[name=files]").val();
-        var token = $("#resume-form-file input[name=_token]").val();
-      //var token = $("#token").text();
-        //console.log(data);
-       var data = {
-           name: name,
-            telephone: telephone,
-            files: files,
-            _token: token
-        };
-
-        $.ajax({
-            url: 'resume',
-            method: "POST",
-            data: data,
-            dataType : "json",
-            success: function(data){
-                console.info('Server response: ', data);
-                if(data.status == 'success'){
-                    swal ("Ваше резюме успішно відправлено!");
-                    jQuery("#resume-form-file").trigger("reset");
-
-
-                }else{
-                    swal("Будь ласка введіть всі дані!");
-                    $("#resume-form-file").attr('disabled', false);
-                }
-
-            },
-            error:function(data){
-                swal ("Сталася помилка при відправці резюме!");
-              //  jQuery("#resume-form-file").trigger("reset");
-            }
-        },"json");
-        event.preventDefault();
-        return false;
-
-    });
-
-});*/
-/* END Скрипт для отправки готового резюме*/

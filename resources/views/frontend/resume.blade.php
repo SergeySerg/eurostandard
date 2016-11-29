@@ -117,13 +117,22 @@
                                     <label for="mobile"><h4>{{ trans('base.resume.mobile') }}</h4></label>
                                     <input id="mobile" accept="doc" type="number" required="required" name="telephone" class="form-control" aria-describedby="sizing-addon2">
                                 </div>
-                                <input type="file" required="required" name="files[]"><br />
+                                <div class="clearfix">
+                                    <label for="mobile"><h4>{{ trans('base.resume.file') }}</h4></label>
+                                    <input type="file" required="required" name="files[]"><br />
+                                </div>
                                 <input type="hidden" name="_token" value="{{ csrf_token()}}">
                                 <input type="submit" value="{{ trans('base.send') }}" class="btn btn-primary btn-lg" role="button">
 
                             </form>
-                            <div id="message"></div>
-
+                            {{--Файл переводов--}}
+                            <script>
+                                var trans = {
+                                    'base.success': '{{ trans('base.success_send_resume') }}',
+                                    'base.error': '{{ trans('base.error_send_resume') }}'
+                                };
+                            </script>
+                            {{--Файл переводов--}}
                             <script>
                                 var form = document.getElementById('upload');
                                 var request = new XMLHttpRequest();
@@ -134,16 +143,29 @@
 
                                     request.open('post', 'upload');
                                     request.addEventListener("load", transferComplete);
+                                    request.addEventListener("error", transferFailed);
                                     request.send(formdata);
 
                                 });
-
                                 function transferComplete(data){
-                                    response = JSON.parse(data.currentTarget.response);
-                                    if(response.success){
-                                        swal ("Ваше резюме успішно відправлено!");
-                                        jQuery("#upload").trigger("reset");
+                                    console.log(data);
+
+                                    if(data.currentTarget.status == 200){
+                                        var response = JSON.parse(data.currentTarget.response);
+                                        if (response.success) {
+                                            swal(trans['base.success'], "", "success");
+                                            jQuery("#upload").trigger("reset");
+                                        }
+                                        else {
+                                            swal(trans['base.error'], response.message, "error");
+                                        }
+                                    }else{
+                                        swal(trans['base.error'], 'Error ' + data.currentTarget.status , "error");
                                     }
+
+                                }
+                                function transferFailed() {
+                                    alert("При загрузке файла произошла ошибка.");
                                 }
                             </script>
                         </div>
