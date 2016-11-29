@@ -149,18 +149,22 @@
                                 });
                                 function transferComplete(data){
                                     console.log(data);
-                                    var response = JSON.parse(data.currentTarget.response);
-                                    if(response.success){
-                                        swal(trans['base.success'], "", "success");
-                                        jQuery("#upload").trigger("reset");
-                                    }
-                                    else{
-                                        swal(trans['base.error'], response.message, "error");
+
+                                    if(data.currentTarget.status == 200){
+                                        var response = JSON.parse(data.currentTarget.response);
+                                        if (response.success) {
+                                            swal(trans['base.success'], "", "success");
+                                            jQuery("#upload").trigger("reset");
+                                        }
+                                        else {
+                                            swal(trans['base.error'], response.message, "error");
+                                        }
+                                    }else{
+                                        swal(trans['base.error'], 'Error ' + data.currentTarget.status , "error");
                                     }
 
                                 }
-                                function transferFailed(data) {
-                                    //console.log(data);
+                                function transferFailed() {
                                     alert("При загрузке файла произошла ошибка.");
                                 }
                             </script>
