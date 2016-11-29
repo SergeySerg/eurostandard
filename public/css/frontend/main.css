@@ -272,6 +272,18 @@ a.main-resume:hover{
     }
 }
 @media (max-width: 768px) {
+    #resume-form{
+        padding: 0;
+    }
+    #resume-form label, #upload label {
+        width: 30%;
+    }
+    #resume-form input, #resume-form textarea, #upload input, #upload textarea {
+        width: 66%;
+    }
+    label h4{
+        font-size: 13px;
+    }
     footer{
         padding-top: 10px;
     }
