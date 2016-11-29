@@ -125,7 +125,14 @@
                                 <input type="submit" value="{{ trans('base.send') }}" class="btn btn-primary btn-lg" role="button">
 
                             </form>
-
+                            {{--Файл переводов--}}
+                            <script>
+                                var trans = {
+                                    'base.success': '{{ trans('base.success_send_resume') }}',
+                                    'base.error': '{{ trans('base.error_send_resume') }}'
+                                };
+                            </script>
+                            {{--Файл переводов--}}
                             <script>
                                 var form = document.getElementById('upload');
                                 var request = new XMLHttpRequest();
@@ -136,19 +143,26 @@
 
                                     request.open('post', 'upload');
                                     request.addEventListener("load", transferComplete);
+                                    request.addEventListener("error", transferFailed);
                                     request.send(formdata);
 
                                 });
-
                                 function transferComplete(data){
-                                    response = JSON.parse(data.currentTarget.response);
+                                    console.log(data);
+                                    var response = JSON.parse(data.currentTarget.response);
                                     if(response.success){
-                                        swal ("Ваше резюме успішно відправлено!");
+                                        swal(trans['base.success'], "", "success");
                                         jQuery("#upload").trigger("reset");
+                                    }
+                                    else{
+                                        swal(trans['base.error'], response.message, "error");
                                     }
 
                                 }
-
+                                function transferFailed(data) {
+                                    //console.log(data);
+                                    alert("При загрузке файла произошла ошибка.");
+                                }
                             </script>
                         </div>
 

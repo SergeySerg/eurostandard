@@ -53,10 +53,16 @@ class ResumeController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-		$this->validate($request, [
-			'name' => 'required|max:255',
-			'telephone' => 'required',
+		$validator = Validator::make($request->all(), [
+			'name' => 'required|max:50',
+			'telephone' => 'required|max:20',
 		]);
+		if ($validator->fails()) {
+			return Response::json(array(
+				'success' => false,
+				'message' => $validator->messages()->first()
+			));
+		}
 		$all = $request->all();
 		if (isset($all['date_birthday']))
 			$all['date_birthday'] = date('Y-m-d H:i:s',strtotime($all['date_birthday']));
@@ -66,8 +72,41 @@ class ResumeController extends Controller {
 		$message->to('webtestingstudio@gmail.com', 'Eurostandard')->subject('Повідомлення про про нове резюме з сайту "Eurostandard" ');
 		});
 		return response()->json([
-			"status" => 'success'
+			"success" => true
 		]);
+	}
+	public function upload(Request $request){
+		$data = $request->all();
+		$data['file'] = $data['files'][0];
+		$validator = Validator::make($data, [
+			'name'  => 'required|max:50',
+			'telephone' => 'required|max:20',
+			'file' => 'required|mimes:doc,docx,xls,xlsx,pdf|max:5000',
+		]);
+		if ($validator->fails()) {
+			return Response::json(array(
+				'success' => false,
+				'message' => $validator->messages()->first()
+			));
+		}
+		$all = $request->all();
+		$files = $request->file('files');
+		if(!empty($files)):
+			$date=date('d.m.Y');
+			foreach($files as $file):
+				$extension = $file->getClientOriginalExtension();
+				$namefile = 'resume_'.time().'.'.$extension;
+				Storage::put('upload/files/'.$date.'/'.$namefile, file_get_contents($file));
+			endforeach;
+		endif;
+		$all['files'] = 'upload/files/'.$date.'/'.$namefile;
+		Resume::create($all);
+		//Отправка уведомления про добавления нового отзыва на email
+		Mail::send('emails.upload-resume', $all, function($message) use ($all){
+			$message->to('webtestingstudio@gmail.com', 'Eurostandard')->subject('Повідомлення про про нове резюме з сайту "Eurostandard" ');
+			$message->attach($all['files']);
+		});
+		return \Response::json(array('success' => true));
 	}
 	/**
 	 * Display the specified resource.
