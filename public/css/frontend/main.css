@@ -312,3 +312,20 @@ a.main-resume:hover{
         padding-left: 0;
     }
 }
+@media (max-width: 600px) {
+    .nav-tabs>li{
+        width: 24%;
+    }
+    .nav>li>a {
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        min-height: 73px;
+    }
+    .nav-tabs>li.active>a,
+    .nav-tabs>li.active>a:focus,
+    .nav-tabs>li.active>a:hover {
+        min-height: 77px;
+    }
+}
