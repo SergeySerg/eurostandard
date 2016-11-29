@@ -316,6 +316,9 @@ a.main-resume:hover{
     .nav-tabs>li{
         width: 24%;
     }
+    .resume .nav-tabs>li{
+        width: 40%;
+    }
     .nav>li>a {
         font-size: 12px;
         padding-left: 5px;

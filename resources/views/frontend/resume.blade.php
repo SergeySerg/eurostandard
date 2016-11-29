@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="col-md-8">
+    <div class="col-md-8 resume">
 
             <ul class="nav nav-tabs">
 
