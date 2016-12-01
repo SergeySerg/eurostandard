@@ -154,7 +154,7 @@ class ResumeController extends Controller {
 	{
 		//
 	}
- private function getEmail(){
+ 	private function getEmail(){
 		$email = Text::where("name","=","config.email")->first();
 		$email = $email['description'];
 		return $email;

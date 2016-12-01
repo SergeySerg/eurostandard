@@ -70,7 +70,6 @@ class AdminResumeController extends Controller {
 	public function show($id)
 	{
 		$admin_resume  = Resume::where('id',$id)->first();
-		//dd($admin_resume);
 		return view('backend.resume.show',[
 			'admin_resume'=>$admin_resume,
 		]);
@@ -108,7 +107,7 @@ class AdminResumeController extends Controller {
 	{
 		$admin_resume = Resume::where('id', '=', $id)->first();
 		if($admin_resume AND $admin_resume->delete()){
-			Storage::deleteDirectory('upload/resume/' . $id);
+			//Storage::deleteDirectory('upload/resume/' . $id);
 
 			return response()->json([
 				"status" => 'success',

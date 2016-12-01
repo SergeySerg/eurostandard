@@ -81,32 +81,6 @@
                         </div>
 
                         <div id="tab2" class="tab-pane fade">
-
-                           <!--<form method="post" id="resume-form-file"  class="r-form" action="">
-
-                                <div class="clearfix">
-                                    <label for="name"><h4>{{ trans('base.resume.name') }}</h4></label>
-                                    <input id="name" type="text" name="name" required="required" class="form-control" aria-describedby="sizing-addon2">
-                                </div>
-
-                                <div class="clearfix">
-                                    <label for="mobile"><h4>{{ trans('base.resume.mobile') }}</h4></label>
-                                    <input id="mobile" type="number" required="required" name="telephone" class="form-control" aria-describedby="sizing-addon2">
-                                </div>
-
-                                <div class="clearfix">
-                                    <label for="file"><h4>{{ trans('base.resume.file') }}</h4></label>
-                                    <input id="file" accept="doc,xls,zip" type="file" name="files" class="form-control" aria-describedby="sizing-addon2">
-                                </div>
-
-
-
-                                <input type="submit" value="{{ trans('base.send') }}" id = "resume-send-file" class="btn btn-primary btn-lg" href="#" role="button">
-
-                                <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-
-                            </form>-->
-
                             <form action="upload" id="upload" class="r-form" enctype="multipart/form-data">
                                 <div class="clearfix">
                                     <label for="name"><h4>{{ trans('base.resume.name') }}</h4></label>
@@ -165,7 +139,7 @@
 
                                 }
                                 function transferFailed() {
-                                    alert("При загрузке файла произошла ошибка.");
+                                    alert("При завантаженні файла виникла помилка");
                                 }
                             </script>
                         </div>

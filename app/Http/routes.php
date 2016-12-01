@@ -36,8 +36,6 @@ Route::post('/contact', function(){
 				"status" => 'error'
 			]);
 		}
-
-
 		Mail::send('emails.letter', $data, function($message) use ($user) {
 			$message->to('webtestingstudio@gmail.com', 'Premium Club')->subject('Повідомлення з сайту Premium Club ');
 		});

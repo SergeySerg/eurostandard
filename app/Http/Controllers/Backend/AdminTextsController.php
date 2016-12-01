@@ -34,7 +34,7 @@ class AdminTextsController extends Controller {
 
 		return view('backend.texts.list',[
 			'admin_texts' => $admin_texts
-			]);
+		]);
 	}
 
 	/**
@@ -151,7 +151,6 @@ class AdminTextsController extends Controller {
 			}else{
 				$all['description'] .= (isset($all["description_{$lang['lang']}"]) ? $all["description_{$lang['lang']}"] : '') .'|';
 			}
-
 			unset($all["description_{$lang['lang']}"]);
 
 		}

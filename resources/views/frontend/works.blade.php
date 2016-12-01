@@ -45,7 +45,7 @@
                         @endforeach
 
                     </div>
-
+                    {!! $works->render() !!}
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
                             <li>
