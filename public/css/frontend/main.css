@@ -312,3 +312,7 @@ a.main-resume:hover{
         padding-left: 0;
     }
 }
+.pagination>li.active span {
+    background-color: #75caeb !important;
+    color: #127ba3;
+}

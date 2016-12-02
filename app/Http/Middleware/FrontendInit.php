@@ -55,15 +55,13 @@ class FrontendInit {
 			->articles()
 			->where('active','=', '1')
 			->orderBy("priority", 'desc')
-			->get();
+			->paginate(5);
 		$works = Category::where('link','=', 'works')
 			->first()
 			->articles()
 			->where('active','=', '1')
-			//->orderBy("priority", 'desc')
-			//->get();
-			->paginate(3);
-		//dd($works);
+			->orderBy("priority", 'desc')
+			->paginate(5);
 		$last_works = Category::where('link','=', 'works')
 			->first()
 			->articles()
