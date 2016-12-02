@@ -17,6 +17,7 @@ use App\Models\Article;
 use App\Models\Category;
 use App\Models\Resume;
 use App\Models\Comment;
+use App\Models\Text;
 use App;
 use Illuminate\Support\Facades\Response;
 use Storage;
@@ -69,7 +70,8 @@ class ResumeController extends Controller {
 			Resume::create($all);
 		//Отправка уведомления про добавления нового отзыва на email
 		Mail::send('emails.resume', $all, function($message){
-		$message->to('webtestingstudio@gmail.com', 'Eurostandard')->subject('Повідомлення про про нове резюме з сайту "Eurostandard" ');
+		$email = $this->getEmail();
+		$message->to($email, 'Eurostandard')->subject('Повідомлення про про нове резюме з сайту "Eurostandard" ');
 		});
 		return response()->json([
 			"success" => true
@@ -103,7 +105,8 @@ class ResumeController extends Controller {
 		Resume::create($all);
 		//Отправка уведомления про добавления нового отзыва на email
 		Mail::send('emails.upload-resume', $all, function($message) use ($all){
-			$message->to('webtestingstudio@gmail.com', 'Eurostandard')->subject('Повідомлення про про нове резюме з сайту "Eurostandard" ');
+			$email = $this->getEmail();
+			$message->to($email, 'Eurostandard')->subject('Повідомлення про про нове резюме з сайту "Eurostandard" ');
 			$message->attach($all['files']);
 		});
 		return \Response::json(array('success' => true));
@@ -150,6 +153,11 @@ class ResumeController extends Controller {
 	public function destroy($id)
 	{
 		//
+	}
+ 	private function getEmail(){
+		$email = Text::where("name","=","config.email")->first();
+		$email = $email['description'];
+		return $email;
 	}
 
 }
