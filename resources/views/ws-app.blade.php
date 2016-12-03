@@ -142,7 +142,7 @@
 
 			@if(!(Request::is(App::getLocale())))
 
-				<div class="col-sm-4 col-md-4">
+				<div class="col-md-4">
 
 					@if(!(Request::is('*/works')) and !(Request::is('*/news/article-*')) )
 
