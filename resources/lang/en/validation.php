@@ -102,6 +102,18 @@ return [
 	|
 	*/
 
-	'attributes' => [],
+	'attributes' => [
+		'name' => 'Full name',
+		'date_birthday' => 'Date of birth',
+		'home' => 'Address of residence',
+		'telephone' => 'Mobile phone',
+		'home_telephone' => 'Phone home',
+		'education' => 'Education',
+		'specialty' => 'Specialty',
+		'experience' => 'Experience',
+		'possession' => 'Characteristics power tools',
+		'salary' => 'Preferred salary',
+		'files[]' => 'Attach file summary',
+	],
 
 ];

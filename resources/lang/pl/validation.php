@@ -102,6 +102,18 @@ return [
 	|
 	*/
 
-	'attributes' => [],
+	'attributes' => [
+		'name' => 'Imię Nazwisko',
+		'date_birthday' => 'Data urodzenia',
+		'home' => 'Adres zamieszkania',
+		'telephone' => 'Telefon komórkowy',
+		'home_telephone' => 'Telefon domowy',
+		'education' => 'Edukacja',
+		'specialty' => 'Specjalność',
+		'experience' => 'Doświadczenie',
+		'possession' => 'Charakterystyka elektronarzędzia',
+		'salary' => 'Korzystne zarobki',
+		'files[]' => 'Dołączanie pliku podsumowanie',
+	],
 
 ];
