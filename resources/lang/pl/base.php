@@ -63,5 +63,6 @@ return [
 	/* Script Resume*/
 	'success_send_resume' => 'Twoje CV wysłane pomyślnie!',
 	'error_send_resume' => 'Błąd wysyłania CV!',
+	'error_upload' => 'Błąd wczytywania pliku',
 	/* /Script Resume*/
 ];

@@ -64,5 +64,6 @@ return [
 	/* Script Resume*/
 	'success_send_resume' => 'Ваше резюме успішно відправлено!',
 	'error_send_resume' => 'Помилка при відправці резюме!',
+	'error_upload' => 'При завантаженні файла виникла помилка',
 	/* /Script Resume*/
 ];

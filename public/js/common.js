@@ -157,8 +157,8 @@ $(function(){
     });
 /* Скрипт для отправки резюме с сайта */
     document.addEventListener("DOMContentLoaded", function(){
-        /*Start script for comments*/
         $('#resume-send').on('click', function(event){
+            $('#resume-send').attr('disabled', true);
             var data = $('form#resume-form').serialize();
             $.ajax({
                 url: 'resume',
@@ -170,6 +170,7 @@ $(function(){
                     if(data.success){
                         swal(trans['base.success'], "", "success");
                         jQuery("#resume-form").trigger("reset");
+                        $("#resume-send").attr('disabled', false);
                     }
                     else{
                         swal(trans['base.error'], data.message, "error");
@@ -179,6 +180,7 @@ $(function(){
                 },
                 error:function(data){
                     swal(trans['base.error']);
+                    $("#resume-send").attr('disabled', false);
                     //  jQuery("#resume-form").trigger("reset");
                 }
 
@@ -186,6 +188,5 @@ $(function(){
             event.preventDefault();
 
         });
-        /*End script for comments*/
     });
 /* END Скрипт для отправки резюме с сайта */

@@ -103,7 +103,8 @@
                             <script>
                                 var trans = {
                                     'base.success': '{{ trans('base.success_send_resume') }}',
-                                    'base.error': '{{ trans('base.error_send_resume') }}'
+                                    'base.error': '{{ trans('base.error_send_resume') }}',
+                                    'base.error_upload': '{{ trans('base.error_upload') }}'
                                 };
                             </script>
                             {{--Файл переводов--}}
@@ -139,7 +140,7 @@
 
                                 }
                                 function transferFailed() {
-                                    alert("При завантаженні файла виникла помилка");
+                                    alert(trans['base.error_upload']);
                                 }
                             </script>
                         </div>

@@ -63,6 +63,7 @@ return [
 	/* Script Resume*/
 	'success_send_resume' => 'Your resume send successfully!',
 	'error_send_resume' => 'Error sending resumes!',
+	'error_upload' => 'Error loading file',
 	/* /Script Resume*/
 
 ];
