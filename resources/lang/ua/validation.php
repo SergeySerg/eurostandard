@@ -47,7 +47,7 @@ return [
 		"string"  => ":attribute не може бути більше, ніж :max символів.",
 		"array"   => "The :attribute may not have more than :max items.",
 	],
-	"mimes"                => ":attribute повинен бути з наступним розширенням :values.",
+	"mimes"                => "Поле :attribute повинен бути з наступним розширенням :values.",
 	"min"                  => [
 		"numeric" => "The :attribute must be at least :min.",
 		"file"    => "The :attribute must be at least :min kilobytes.",
@@ -113,7 +113,7 @@ return [
 		'experience' => 'Досвід роботи',
 		'possession' => 'Володіння електроінструментом',
 		'salary' => 'Бажаний рівень зп',
-		'files[]' => 'Прикріпити файл резюме',
+		'file' => 'Прикріпити файл резюме',
 	],
 
 ];

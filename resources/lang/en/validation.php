@@ -113,7 +113,7 @@ return [
 		'experience' => 'Experience',
 		'possession' => 'Characteristics power tools',
 		'salary' => 'Preferred salary',
-		'files[]' => 'Attach file summary',
+		'file' => 'Attach file summary',
 	],
 
 ];

@@ -47,7 +47,7 @@ return [
 		"string"  => ":attribute nie powinna przekraczać rozmiary :max znakiv.",
 		"array"   => "The :attribute may not have more than :max items.",
 	],
-	"mimes"                => ":attribute musi być rozszerzenie: :values.",
+	"mimes"                => "pole :attribute musi być rozszerzenie: :values.",
 	"min"                  => [
 		"numeric" => "The :attribute must be at least :min.",
 		"file"    => "The :attribute must be at least :min kilobytes.",
@@ -113,7 +113,7 @@ return [
 		'experience' => 'Doświadczenie',
 		'possession' => 'Charakterystyka elektronarzędzia',
 		'salary' => 'Korzystne zarobki',
-		'files[]' => 'Dołączanie pliku podsumowanie',
+		'file' => 'Dołączanie pliku podsumowanie',
 	],
 
 ];

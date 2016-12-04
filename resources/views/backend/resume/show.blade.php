@@ -53,8 +53,10 @@
                         <div class="profile-info-name"> Дата народження </div>
 
                         <div class="profile-info-value">
-                            @if($admin_resume && $admin_resume->date_birthday)
-                                <span class="editable" id="date_birthday">{{date('d-m-Y',strtotime($admin_resume->date_birthday))}}</span>
+                            @if($admin_resume && $admin_resume->date_birthday && ($admin_resume->date_birthday !== '0000-00-00 00:00:00'))
+                                <span class="editable" id="date_birthday">
+                                    {{date('d-m-Y',strtotime($admin_resume->date_birthday))}}
+                                </span>
                             @else <span style="color: lightgrey"> Не вказано </span>
                             @endif
                         </div>

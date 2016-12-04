@@ -65,9 +65,10 @@ class ResumeController extends Controller {
 			));
 		}
 		$all = $request->all();
-		if (isset($all['date_birthday']))
+		if (isset($all['date_birthday'])){
 			$all['date_birthday'] = date('Y-m-d H:i:s',strtotime($all['date_birthday']));
-			Resume::create($all);
+		}
+		Resume::create($all);
 		//Отправка уведомления про добавления нового отзыва на email
 		Mail::send('emails.resume', $all, function($message){
 		$email = $this->getEmail();
