@@ -32,7 +32,7 @@ class ResumeController extends Controller {
 	 */
 	public function index()
 	{
-		$meta = view()->share('meta', Article::where('name', '=', 'meta.company')->first());
+		$meta = view()->share('meta', Article::where('name', '=', 'meta.resume')->first());
 
 		return view('frontend.resume');
 	}
