@@ -38,19 +38,6 @@ ul{
     padding-bottom: 15px;
     line-height: 30px;
 }
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:focus,
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>li>a:focus,
-.navbar-default .navbar-nav>li>a:hover{
-    border-top: 3px solid #75CAEB;
-    padding-top: 17px;
-}
-.panel-default>.panel-heading{
-    border-bottom:1px solid #75CAEB;
-    font-size: 20px;
-    font-weight: bold;
-}
 .panel-body a{
     padding-bottom: 10px;
     padding-right: 5px;
@@ -223,14 +210,6 @@ a.main-resume:hover{
     bordr-left: none;
     padding-right: 20px;
     padding-left: 20px;
-}
-.navbar-fixed-top .navbar-nav>.active>a,
-.navbar-fixed-top .navbar-nav>.active>a:focus,
-.navbar-fixed-top .navbar-nav>.active>a:hover,
-.navbar-fixed-top .navbar-nav>li>a:focus,
-.navbar-fixed-top .navbar-nav>li>a:hover{
-    border-top: 3px solid #75CAEB;
-    padding-top: 7px;
 }
 .navbar-fixed-top .navbar-brand{
     padding: 10px;
