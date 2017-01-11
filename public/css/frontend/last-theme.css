@@ -290,3 +290,30 @@ footer .navbar-text a{
 .ug-bullets.ug-skin-default .ug-bullet{
     background-image: url("../../img/frontend/slider_bullets_my.png") !important;
 }
+.ug-button-tile-navigation.ug-button-tile-play{
+    display: none;
+}
+.ug-button-tile-navigation {
+    width: 70px !important;
+    height: 60px !important;
+    background-color: rgba(0, 0, 0, .3);
+}
+.ug-button-tile-navigation:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+.ug-button-tile-navigation.ug-button-tile-left{
+    background-image: url("../../img/frontend/arrow-left.png") !important;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -130px;
+    left: -376px;
+}
+.ug-button-tile-navigation.ug-button-tile-right{
+    background-image: url("../../img/frontend/arrow-right.png") !important;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -130px;
+    right: -374px;
+}

@@ -48,8 +48,12 @@ $(function(){
     $("#flex-gallery-company").unitegallery({
         gallery_theme: "carousel",
         gallery_width:'100%',							//gallery width
-        gallery_height:300,								//gallery height
+        gallery_height:260,								//gallery height
         gallery_max_height: 300,
+        tile_width: 165,						//tile width
+        tile_height: 140,
+        carousel_space_between_tiles: 25,
+        tile_enable_border:false,
     });
     /* END  галлерея на странице компании*/
     
@@ -58,13 +62,14 @@ $(function(){
         $(this).unitegallery({
             gallery_theme: "tilesgrid",
             gallery_width:"100%",              //gallery width
-            grid_space_between_cols:20,
-            grid_space_between_rows:20,
+            grid_space_between_cols:15,
+            grid_space_between_rows:25,
             grid_space_between_mobile:0,
-            tile_enable_border:true,
+            tile_enable_border:false,
             tile_enable_shadow:false,
             grid_padding:0,
-            tile_width: 150,
+            tile_width: 165,						//tile width
+            tile_height: 140,
             grid_num_rows:10
         });
     });
