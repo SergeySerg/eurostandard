@@ -24,8 +24,9 @@
 
 	{{-- Bootstrap core CSS --}}
 	<link href="{{ asset('/css/frontend/bootstrap.min.css') }}" rel="stylesheet">
-	<link href="{{ asset('/css/frontend/flex-light-theme.css') }}?ver={{ $version }}" rel="stylesheet">
 	<link href="{{ asset('/css/frontend/main.css') }}?ver={{ $version }}" rel="stylesheet">
+	<link href="{{ asset('/css/frontend/last-theme.css') }}?ver={{ $version }}" rel="stylesheet">
+	<link href="{{ asset('/css/frontend/fonts.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/frontend/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/libs/unitegallery/dist/css/unite-gallery.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/plugins/sweetalert.css') }}" rel="stylesheet">
@@ -78,7 +79,7 @@
 								<img alt="Brand" src="/img/frontend/logo.jpg">
 							</a>
 
-							<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD sp. z o.o.</a></p>
+							<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD</a></p>
 
 						</div>
 
@@ -250,9 +251,10 @@
 	</div> {{-- /container --}}
 
 	{{-- Site footer --}}
-	<footer>
 
-		<div class="container">
+	<div class="container">
+
+		<footer class="footer">
 
 			<div class="row">
 
@@ -262,13 +264,13 @@
 						<img alt="Brand" src="/img/frontend/logo.jpg">
 					</a>
 
-					<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD sp. z o.o.</a></p>
+					<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD</a></p>
 
 				</div>
 
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-6 text-center wow fadeInDown min-center">
 
-					<i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+					<i class="fa fa-map-marker fa-4x" aria-hidden="true"></i>
 					<p>	{{  $texts->get('header.address') }}<br>
 						{{  $texts->get('header.address_poland') }}
 					</p>
@@ -277,7 +279,7 @@
 
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 text-right wow fadeInLeft min-center">
 
-					<i class="fa fa-phone fa-3x" aria-hidden="true"></i>
+					<i class="fa fa-phone fa-4x" aria-hidden="true"></i>
 
 					<ul class="phone">
 						<li>{{  $texts->get('header.tel1') }}</li>
@@ -288,9 +290,10 @@
 
 			</div>
 
-		</div>
+		</footer>
 
-	</footer>
+	</div>
+
 
 
 <script src="{{ asset('/js/frontend/jquery-11.0.min.js') }}"></script>

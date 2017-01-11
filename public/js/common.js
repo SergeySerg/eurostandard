@@ -6,25 +6,41 @@ $(function(){
         gallery_theme: "slider",
         tiles_justified_space_between:0,
         gallery_width:'100%',							//gallery width
-        gallery_height:300,								//gallery height
+        gallery_height:360,								//gallery height
         gallery_max_height: 300,
         slider_control_zoom: false,
         slider_enable_text_panel: true,			 		//true,false - enable the text panel
         slider_textpanel_always_on: true,				//true,false - text panel are always on, false - show only on mouseover
         slider_textpanel_text_valign: "middle",			//middle, top, bottom - text vertical align
-        slider_textpanel_padding_top:10,				//textpanel padding top
-        slider_textpanel_padding_bottom:20,				//textpanel padding bottom
+        slider_textpanel_padding_top:25,				//textpanel padding top
+        slider_textpanel_padding_bottom:25,				//textpanel padding bottom
         slider_textpanel_height: null,					//textpanel height. if null it will be set dynamically
         slider_textpanel_padding_title_description: 5,	//the space between the title and the description
-        slider_textpanel_padding_right: 11,				//cut some space for text from right
-        slider_textpanel_padding_left: 11,				//cut some space for text from left
+        slider_textpanel_padding_right: 20,				//cut some space for text from right
+        slider_textpanel_padding_left: 20,				//cut some space for text from left
         slider_textpanel_fade_duration: 200,			//the fade duration of textpanel appear
         slider_textpanel_enable_title: true,			//enable the title text
         slider_textpanel_enable_description: true,		//enable the description text
         slider_textpanel_enable_bg: true,				//enable the textpanel background
         slider_textpanel_bg_color:"#000000",			//textpanel background color
-        slider_textpanel_bg_opacity: 0.4,
+        slider_textpanel_bg_opacity: 0.3,
         slider_enable_bullets: false,
+        slider_arrow_left_offset_hor:0,
+        slider_arrow_right_offset_hor:0,
+        slider_enable_bullets: true,				//enable the bullets onslider element
+        slider_bullets_skin: "",					//skin of the bullets, if empty inherit from gallery skin
+        slider_bullets_space_between: -1,			//set the space between bullets. If -1 then will be set default space from the skins
+        slider_bullets_align_hor:"center",			//left, center, right - bullets horizontal align
+        slider_bullets_align_vert:"bottom",			//top, middle, bottom - bullets vertical algin
+        slider_bullets_offset_hor:0,				//bullets horizontal offset
+        slider_bullets_offset_vert:10,
+        slider_textpanel_title_color:"#ffffff",				//textpanel title color. if null - take from css
+        slider_textpanel_title_font_family:"MagistralBlack",		//textpanel title font family. if null - take from css
+        slider_textpanel_title_text_align:null,			//textpanel title text align. if null - take from css
+        slider_textpanel_title_font_size: 30,
+        slider_textpanel_desc_color:"#ffffff",				//textpanel description font family. if null - take from css
+        slider_textpanel_desc_font_family:"OpenSans",			//textpanel description font family. if null - take from css
+        slider_textpanel_desc_font_size:15,
     });
     /* END слайдер на главной*/
 

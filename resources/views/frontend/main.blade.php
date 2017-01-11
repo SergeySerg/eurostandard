@@ -26,27 +26,13 @@
 
     <div class="col-md-12">
 
-        <div class="panel panel-default wow fadeInLeft">
+        <div class="panel panel-default about-us wow fadeInLeft">
 
-            <div class="panel-heading">{{ $main->getTranslate('title') }}</div>
+            <div class="panel-heading about-us_heading">{{ $main->getTranslate('title') }}</div>
 
-            <div class="panel-body">
+            <div class="panel-body about-us_body">
 
-                <div class="col-sm-4 col-md-3">
-
-                    <a href="#" class="thumbnail">
-
-                        @if(count($main->getImages()) > 0)
-
-                             <img src="/{{$main->getImages()[0]['min']}}" alt="...">
-
-                        @endif
-
-                    </a>
-
-                </div>
-
-                <div class="col-sm-8 col-md-9">
+                <div class="col-12">
 
                     {!! $main->getTranslate('short_description') !!}
 
@@ -81,7 +67,7 @@
                                 @if(count($last_new->getImages()) > 0)
 
                                     <a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="thumbnail">
-                                        <img src="/{{$last_new->getImages()[0]['min']}}" style="height:93px" alt="...">
+                                        <img src="/{{$last_new->getImages()[0]['min']}}" style="height:120px" alt="...">
                                     </a>
 
                                 @endif
@@ -90,11 +76,11 @@
 
                             <div class="col-md-8">
 
-                                <h4>{{ $last_new->getTranslate('title') }}</h4>
+                                <h4 class="title">{{ $last_new->getTranslate('title') }}</h4>
 
-                                <p>{!! str_limit($last_new->getTranslate('short_description'), 140) !!}</p>
+                                <div class="block-content">{!! str_limit($last_new->getTranslate('short_description'), 140) !!}</div>
 
-                                <a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="pull-right">{{ trans('base.read_full_news') }}<i class="fa fa-angle-right fa-lg"></i></a>
+                                <a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="pull-right">{{ trans('base.read_full_news') }}<i class="fa fa-angle-right fa-lg  fa_my"></i><i class="fa fa-angle-right fa-lg"></i></a>
 
                             </div>
 
@@ -130,13 +116,17 @@
 
                             <div class="col-md-12">
 
-                                <h4 class="col-sm-6 col-md-6 text-left r-prof">{{ $last_work->getTranslate('title') }}</h4>
+                                <div class="clearfix">
 
-                                <h4 class="col-sm-6 col-md-6 text-right r-price">{!! $last_work->getTranslate('price') !!}</h4>
+                                    <h4 class="col-sm-6 col-md-6 text-left r-prof title">{{ $last_work->getTranslate('title') }}</h4>
 
-                                <p>{!! str_limit($last_work->getTranslate('short_description'), 200) !!}</p>
+                                    <h4 class="col-sm-6 col-md-6 text-right r-price title">{!! $last_work->getTranslate('price') !!}</h4>
 
-                                <a href="/{{ App::getLocale() }}/works/article-{{ $last_work -> id }}" class="pull-right">{{ trans('base.more') }}<i class="fa fa-angle-right fa-lg"></i></a>
+                                </div>
+
+                                <div class="block-content">{!! str_limit($last_work->getTranslate('short_description'), 200) !!}</div>
+
+                                <a href="/{{ App::getLocale() }}/works/article-{{ $last_work -> id }}" class="pull-right">{{ trans('base.more') }}<i class="fa fa-angle-right fa-lg  fa_my"></i><i class="fa fa-angle-right fa-lg"></i></a>
 
                             </div>
 
@@ -148,7 +138,7 @@
 
                 </div>
 
-                <p><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/works" role="button">{{ trans('base.all_jobs') }}</a></p>
+                <p style="text-align: center;"><a class="btn btn-primary btn-lg" style="width: 90%;" href="/{{ App::getLocale() }}/works" role="button">{{ trans('base.all_jobs') }}</a></p>
 
             </div>
 
