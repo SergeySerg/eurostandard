@@ -19,7 +19,9 @@ body{
 .navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover{
     border-top: 3px solid #75CAEB;
+    /*
     padding-top: 17px;
+    */
 }
 .panel-default>.panel-heading{
     background: none;
