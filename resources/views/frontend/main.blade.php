@@ -50,7 +50,7 @@
 
     <div class="col-sm-6 col-md-6">
 
-        <div class="panel panel-default wow fadeInUp">
+        <div class="panel panel-default bg_grey wow fadeInUp">
 
             <div class="panel-heading">{{ trans('base.latest_news') }}</div>
 
@@ -60,13 +60,13 @@
 
                     @foreach($last_news as $last_new)
 
-                        <div class="r-block-item">
+                        <div class="r-block-item clearfix">
 
                             <div class="col-md-4">
 
                                 @if(count($last_new->getImages()) > 0)
 
-                                    <a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="thumbnail">
+                                    <a href="/{{ App::getLocale() }}/news/article-{{ $last_new -> id }}" class="thumbnail bg_grey">
                                         <img src="/{{$last_new->getImages()[0]['min']}}" style="height:120px" alt="...">
                                     </a>
 
@@ -84,8 +84,6 @@
 
                             </div>
 
-                            <hr>
-
                         </div>
 
                     @endforeach
@@ -102,7 +100,7 @@
 
     <div class="col-sm-6 col-md-6">
 
-        <div class="panel panel-default wow fadeInDown">
+        <div class="panel panel-default bg_grey wow fadeInDown">
 
             <div class="panel-heading">{{ trans('base.latest_jobs') }}</div>
 
@@ -112,7 +110,7 @@
 
                     @foreach($last_works as $last_work)
 
-                        <div class="r-block-item">
+                        <div class="r-block-item clearfix">
 
                             <div class="col-md-12">
 
@@ -129,8 +127,6 @@
                                 <a href="/{{ App::getLocale() }}/works/article-{{ $last_work -> id }}" class="pull-right">{{ trans('base.more') }}<i class="fa fa-angle-right fa-lg  fa_my"></i><i class="fa fa-angle-right fa-lg"></i></a>
 
                             </div>
-
-                            <hr>
 
                         </div>
 

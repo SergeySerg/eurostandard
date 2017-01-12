@@ -6,39 +6,37 @@
 
             <div class="panel panel-default wow fadeInDown">
 
-                <div class="panel-heading">{{ trans('base.latest_jobs') }}</div>
+                <div class="panel-heading panel-heading_bg">{{ trans('base.latest_jobs') }}</div>
 
-                <div class="panel-body">
+                <div class="panel-body panel-body_works">
 
                     <div class="row">
 
                         @foreach($works as $work_item)
 
-                            <div class="r-block-item">
+                            <div class="r-block-item clearfix">
 
                                 <div class="col-md-12">
 
-                                    <h4 class="r-prof">{{ $work_item->getTranslate('title') }}</h4>
+                                    <h4 class="r-prof title_works">{{ $work_item->getTranslate('title') }}</h4>
 
-                                    <div class="clearfix">
+                                    <div class="works-line clearfix">
 
-                                        <h5 class="works-atribute">{{ trans('base.date') }}:<span class="news-date">{{ date('d/m/Y ',strtotime($work_item -> date)) }}</span></h5>
+                                        <h5 class="works-atribute"><span class="news-date news-date_line">{{ trans('base.date') }}:{{ date('d.m.Y ',strtotime($work_item -> date)) }}</span></h5>
 
-                                        <h5 class="r-price works-atribute">{{ trans('base.salary') }}<span class="news-date">{{ $work_item->getTranslate('price') }} грн</span></h5>
+                                        <h4 class="r-price r-price_line works-atribute">{{ trans('base.salary') }} {{ $work_item->getTranslate('price') }} грн</h4>
 
                                     </div>
 
-                                    {!! str_limit($work_item->getTranslate('short_description'), 400) !!}
+                                    <div class="block-content">{!! str_limit($work_item->getTranslate('short_description'), 400) !!}</div>
 
                                     <div class="clearfix">
 
-                                        <a href="/{{ App::getLocale() }}/works/article-{{ $work_item -> id }}" class="pull-right">{{ trans('base.more') }}<i class="fa fa-angle-right fa-lg"></i></a>
+                                        <a href="/{{ App::getLocale() }}/works/article-{{ $work_item -> id }}" class="pull-right">{{ trans('base.more') }}<i class="fa fa-angle-right fa-lg fa_my"></i><i class="fa fa-angle-right fa-lg"></i></a>
 
                                     </div>
 
                                 </div>
-
-                                <hr>
 
                             </div>
 

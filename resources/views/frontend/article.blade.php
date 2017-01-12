@@ -6,7 +6,7 @@
 
         <div class="panel panel-default wow fadeInUp">
 
-            <div class="panel-heading">{{ $article->getTranslate('title') }}
+            <div class="panel-heading panel-heading_bg">{{ $article->getTranslate('title') }}
 
                 @if(Request::is('*/news/*'))
                     <div class="pull-right"><i class="fa fa-calendar" aria-hidden="true"></i>{{ date('d/m/Y ',strtotime($article -> date)) }}</div>
@@ -36,15 +36,15 @@
 
                         <div class="col-md-12">
 
-                            {!! $article->getTranslate('description') !!}
+                            <div class="block-content"> {!! $article->getTranslate('description') !!}</div>
 
                             @if(Request::is('*/news/*'))
 
-                                <a href="/{{ App::getLocale() }}/news" class="pull-right">{{ trans('base.all_news') }}<i class="fa fa-angle-right fa-lg"></i></a>
+                                <a href="/{{ App::getLocale() }}/news" class="pull-right">{{ trans('base.all_news') }}<i class="fa fa-angle-right fa-lg fa_my"></i><i class="fa fa-angle-right fa-lg"></i></a>
 
                             @else
 
-                                <a href="/{{ App::getLocale() }}/works" class="pull-right">{{ trans('base.all_jobs') }}<i class="fa fa-angle-right fa-lg"></i></a>
+                                <a href="/{{ App::getLocale() }}/works" class="pull-right">{{ trans('base.all_jobs') }}<i class="fa fa-angle-right fa-lg fa_my"></i><i class="fa fa-angle-right fa-lg"></i></a>
 
                             @endif
 
