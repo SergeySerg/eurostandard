@@ -147,7 +147,7 @@
 
 					@if(!(Request::is('*/works')) and !(Request::is('*/news/article-*')) )
 
-						<div class="panel panel-default bg_grey wow fadeInDown">
+							<div class="panel panel-default bg_grey wow fadeInDown">
 
 						<div class="panel-heading">{{ trans('base.latest_jobs') }}</div>
 

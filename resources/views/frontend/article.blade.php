@@ -20,7 +20,7 @@
 
                 <div class="row">
 
-                    <div class="r-block-item">
+                    <div class="r-block-item r-block-item_article">
 
                         @if(count($article->getImages()) > 0)
 

@@ -40,7 +40,7 @@
 
                                 <div class="clearfix">
 
-                                    <span class="pull-left"><span class="news-date">{{ trans('base.date') }}:{{ date('d.m.Y ',strtotime($new -> date)) }}</span></span>
+                                    <span class="pull-left"><span class="news-date">{{ trans('base.date') }}: {{ date('d.m.Y ',strtotime($new -> date)) }}</span></span>
 
                                     <a href="/{{ App::getLocale() }}/news/article-{{ $new -> id }}" class="pull-right">{{ trans('base.read_full_news') }}<i class="fa fa-angle-right fa-lg fa_my"></i><i class="fa fa-angle-right fa-lg"></i></a>
 

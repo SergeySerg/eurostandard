@@ -32,7 +32,7 @@
 
             <div class="panel-body about-us_body">
 
-                <div class="col-12">
+                <div class="col-md-12">
 
                     {!! $main->getTranslate('short_description') !!}
 
