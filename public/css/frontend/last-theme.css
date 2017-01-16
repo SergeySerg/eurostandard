@@ -1,9 +1,8 @@
 body{
-    /*
-    background-image: url("../../img/frontend/bg.jpg")
-    */
-    background-image: url("../../img/frontend/bg1.jpg");
+    background-image: url("../../img/frontend/bg/1.jpg");
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 .navbar-fixed-top .navbar-nav>.active>a,
 .navbar-fixed-top .navbar-nav>.active>a:focus,
@@ -29,7 +28,7 @@ body{
     border-radius: 0;
     background-color: #b1e2e9;
     color: #ffffff;
-    font-family: "MagistralBlack", sans-serif;
+    font-family: "MagistralBlack", "Arial Black", sans-serif;
     font-size: 24px;
     text-transform: uppercase;
 }
@@ -116,7 +115,7 @@ footer .fa-3x{
 }
 .navbar-default .navbar-text a {
     font-size: 26px;
-    font-family: "MagistralBlack";
+    font-family: "MagistralBlack", "Arial Black";
 }
 footer .navbar-text {
     margin-top: 10px;
@@ -128,7 +127,7 @@ footer .navbar-text {
     color: #ffffff;
     background-color: #cf95eb;
     cursor: auto;
-    font-family: "OpenSansSemibold";
+    font-family: "OpenSansSemiBold";
 }
 .pagination>.disabled>a,
 .pagination>.disabled>a:focus,
@@ -149,7 +148,7 @@ footer .navbar-text {
     border: none;
     font-size: 16px;
     color: #000;
-    font-family: "OpenSansSemibold", sans-serif;
+    font-family: "OpenSansSemiBold", sans-serif;
 }
 .pagination>.disabled>a,
 .pagination>.disabled>a:focus,
@@ -194,7 +193,7 @@ footer .navbar-text {
     line-height: 30px;
 }
 .description-show{
-    font-family: "OpenSansSemibold", sans-serif;
+    font-family: "OpenSansSemiBold", sans-serif;
     font-size: 16px;
     line-height: 30px;
     color: #15b7cd;
@@ -204,7 +203,7 @@ footer .navbar-text {
 }
 a{
     color: #15b7cd;
-    font-family: "OpenSansSemibold", sans-serif;
+    font-family: "OpenSansSemiBold", sans-serif;
 }
 a:focus, a:hover {
     color: #15b7cd;
@@ -220,13 +219,13 @@ a:focus, a:hover {
     height: 55px;
     margin-bottom: 0;
     line-height: 28px;
-    font-family: "OpenSansSemibold", sans-serif;
+    font-family: "OpenSansSemiBold", sans-serif;
     text-transform: uppercase;
 }
 .panel-body h4.title_news{
     margin-bottom: 0;
     line-height: 28px;
-    font-family: "OpenSansSemibold", sans-serif;
+    font-family: "OpenSansSemiBold", sans-serif;
     text-transform: uppercase;
 }
 .block-content{
@@ -238,7 +237,7 @@ a:focus, a:hover {
 }
 .btn {
     font-size: 18px;
-    font-family:"OpenSansSemibold", sans-serif;
+    font-family:"OpenSansSemiBold", sans-serif;
 }
 .btn-primary{
     padding-top: 17px !important;
@@ -281,7 +280,7 @@ a:focus, a:hover {
     line-height: 30px;
     margin: 0;
     padding: 0;
-    font-family: "OpenSansSemibold", sans-serif;
+    font-family: "OpenSansSemiBold", sans-serif;
     color: #ababab;
 }
 footer.footer {
@@ -304,11 +303,11 @@ footer p {
     display: inline-block;
     line-height: 30px;
     font-size: 15px;
-    font-family: "OpenSansSemibold", sans-serif;
+    font-family: "OpenSansSemiBold", sans-serif;
     color: #ababab;
 }
 footer .navbar-text a{
-    font-family: "MagistralBlack", sans-serif;
+    font-family: "MagistralBlack", "Arial Black", sans-serif;
     font-size: 16px;
     color: #15b7cd;
 }
@@ -342,7 +341,7 @@ footer .navbar-text a{
     background-repeat: no-repeat;
 }
 .ug-slider-wrapper .ug-textpanel{
-    width: 30% !important;
+    width: 55% !important;
     top: 15% !important;
     right: 15%;
 }
@@ -425,17 +424,17 @@ footer .navbar-text a{
 .title_sidebar{
     font-size: 16px;
     line-height: 28px;
-    font-family: "OpenSansSemibold", sans-serif;
+    font-family: "OpenSansSemiBold", sans-serif;
     text-transform: uppercase;
 }
 .panel-body h4.title_works{
     margin: 5px 0;
     line-height: 28px;
-    font-family: "OpenSansSemibold", sans-serif;
+    font-family: "OpenSansSemiBold", sans-serif;
     text-transform: uppercase;
 }
 .r-price_line{
-    font-family: "OpenSansSemibold", sans-serif;
+    font-family: "OpenSansSemiBold", sans-serif;
     font-size: 18px;
 }
 .works-line{
@@ -457,7 +456,7 @@ footer .navbar-text a{
     background-color: #8adbe6;
     color: #ffffff;
     line-height: 28px;
-    font-family: "MagistralBlack", sans-serif;
+    font-family: "MagistralBlack", "Arial Black", sans-serif;
     text-transform: uppercase;
 }
 .panel-body_contact{
@@ -483,13 +482,14 @@ footer .navbar-text a{
 }
 .block-content .thumbnail{
     float: left;
+    max-width: 100%;
     margin-right: 15px;
     margin-bottom: 0;
 }
 a.main-resume {
     color: #ffffff;
     background-color: #cf95eb;
-    font-family: "OpenSansSemibold";
+    font-family: "OpenSansSemiBold";
     font-size: 16px;
     font-weight: bold;
     border-radius: 0;
@@ -515,4 +515,67 @@ a.main-resume:hover {
 }
 .r-block-item_article{
     border-bottom:0;
+}
+@media (max-width: 1200px) {
+    .about-us_body{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .description-show{
+        margin-right: 0;
+    }
+    .navbar-text{
+        display: block;
+        margin-left: 0;
+    }
+    .navbar-default .navbar-text a{
+        font-size: 18px;
+    }
+    .ug-button-tile-navigation.ug-button-tile-left{
+        left: -309px;
+        z-index: 15;
+    }
+    .ug-button-tile-navigation.ug-button-tile-right{
+        right: -307px;
+        z-index: 15;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-text{
+        display: none;
+    }
+    .navbar-brand{
+        margin-bottom: -50px;
+    }
+    footer .navbar-brand{
+        float: none;
+        margin-top: 0;
+    }
+    .ug-button-tile-navigation.ug-button-tile-left{
+        left: -361px;
+    }
+    .ug-button-tile-navigation.ug-button-tile-right{
+        right: -359px;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-text{
+        display: block;
+        margin-left: 60px;
+    }
+    .navbar-brand{
+        padding-right: 0;
+    }
+    .navbar-default .navbar-text a{
+        line-height: 20px;
+    }
+    .ug-button-tile-navigation.ug-button-tile-left{
+        display: none;
+    }
+    .ug-button-tile-navigation.ug-button-tile-right{
+        display: none;
+    }
+    .ug-gallery-wrapper .ug-textpanel-title{
+        font-size: 18px!important;
+    }
 }

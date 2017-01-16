@@ -134,7 +134,7 @@
 
                 </div>
 
-                <p style="text-align: center;"><a class="btn btn-primary btn-lg" style="width: 90%;" href="/{{ App::getLocale() }}/works" role="button">{{ trans('base.all_jobs') }}</a></p>
+                <p style="text-align: center;"><a class="btn btn-primary btn-lg" style="width: 100%;" href="/{{ App::getLocale() }}/works" role="button">{{ trans('base.all_jobs') }}</a></p>
 
             </div>
 

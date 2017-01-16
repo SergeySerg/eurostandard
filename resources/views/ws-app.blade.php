@@ -74,12 +74,15 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
+							<div class="clearfix">
 
-							<a class="navbar-brand" href="/{{ App::getLocale() }}">
-								<img alt="Brand" src="/img/frontend/logo.jpg">
-							</a>
+								<a class="navbar-brand" href="/{{ App::getLocale() }}">
+									<img alt="Brand" src="/img/frontend/logo.png">
+								</a>
 
-							<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD</a></p>
+								<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD</a></p>
+
+								</div>
 
 						</div>
 
@@ -259,7 +262,7 @@
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 wow fadeInUp min-center">
 
 					<a class="navbar-brand" href="/{{ App::getLocale() }}">
-						<img alt="Brand" src="/img/frontend/logo.jpg">
+						<img alt="Brand" src="/img/frontend/logo.png">
 					</a>
 
 					<p class="navbar-text"><a href="/{{ App::getLocale() }}">EUROSTANDARD</a></p>
